@@ -22,6 +22,16 @@ $(".sent").click(function(e){
 	}
 });
 
+$(".loginToSaveBtn").click(function(e){
+	$('#loginToSaveModal').modal('hide');
+	$("#prijava").click();
+});
+
+$(".registerToSaveBtn").click(function(e){
+	$('#loginToSaveModal').modal('hide');
+    $("#registracija").click();
+	
+});
 
 $(".closeAlert").click(function(e){
 	$('.alert').hide();

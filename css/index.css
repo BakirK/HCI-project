@@ -20,3 +20,6 @@
 .carousel-control-prev {
     filter: invert(50%);
 }
+.container {
+	height:94vh;
+}

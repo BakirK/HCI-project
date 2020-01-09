@@ -52,10 +52,10 @@
               </div>
             </li>
           <li class="nav-item">
-            <a class="nav-link regLog" href="#panel8" data-toggle="modal" data-target="#modalLRForm" ><span class="fas fa-user"></span> Registracija</a>
+            <a class="nav-link regLog" id="registracija" href="#panel8" data-toggle="modal" data-target="#modalLRForm" ><span class="fas fa-user"></span> Registracija</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link regLog" href="#panel7" data-toggle="modal" data-target="#modalLRForm" ><span class="fas fa-sign-in-alt"></span> Prijava</a>
+            <a class="nav-link regLog" id="prijava" href="#panel7" data-toggle="modal" data-target="#modalLRForm" ><span class="fas fa-sign-in-alt"></span> Prijava</a>
           </li>
 
         </ul>
@@ -75,7 +75,7 @@
     </div>
     
     <div class="col-sm-3">
-      <p>Parametri pretrage:</p>
+        <p style="margin-left: 10px;">Parametri pretrage:</p>
       <div id="accordion">
         <div class="card">
           <div class="card-header">
@@ -247,11 +247,49 @@
         </div>
       </div>
         <div class="col text-center saveBtn">
-          <button class="btn btn-secondary">Spasi pretragu</button>
+          <button class="btn btn-light" href="#loginToSaveModal" data-toggle="modal" data-target="#loginToSaveModal" >
+            Spasi pretragu
+            </button>
         </div>
     </div>
   </div>
 </div>
+
+
+
+
+<div class="modal fade" id="loginToSaveModal">
+    <div class="modal-dialog modal-dialog-centered">
+      <div class="modal-content">
+      
+        <!-- Modal Header --> 
+        <div class="modal-header">
+          <h4 class="modal-title text-center">Morate se prijaviti da bi sačuvali pretragu!</h4>
+          <button type="button" class="close" data-dismiss="modal">&times;</button>
+        </div>
+        
+        <!-- Modal body -->
+        <div class="modal-body">
+          <div class="options text-center">
+            <p>Nemate korisnički račun? </p>
+             <button type="button" class="btn btn-primary registerToSaveBtn">Registrujte se</button>
+
+            <p style="margin-top: 20px;">Već imate račun?</p>
+             <button type="button" class="btn btn-primary loginToSaveBtn">Prijavite se</button>
+          </div>
+        </div>
+        
+        <!-- Modal footer -->
+        <div class="modal-footer">
+          <button type="button" class="btn btn-second" data-dismiss="modal">Close</button>
+        </div>
+        
+      </div>
+    </div>
+  </div>
+
+
+
 
 
 
