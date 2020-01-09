@@ -10,7 +10,7 @@ section .section-title {
     text-transform: uppercase;
 }
 #footer {
-    background: #007b5e !important;
+    background-color: #007b5e !important;
 }
 #footer .container {
     height: 30vh;
