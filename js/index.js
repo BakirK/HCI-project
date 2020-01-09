@@ -1,12 +1,20 @@
-  $("#btnGetOffer").click(function(event) {
+//function to open register form when register is clicked instead of login form
+$('.regLog').click(function(e){
+    var tab = e.target.hash; 
+    $('li > a[href="' + tab + '"]').tab("show");
+});
 
-    //Fetch form to apply custom Bootstrap validation
-    var form = $("#formGetOffer")
+$(".loginFormLink").click(function(e){
+	$(".log").click();
+});
 
-    if (form[0].checkValidity() === false) {
-      event.preventDefault()
-      event.stopPropagation()
-    }
-    
-    form.addClass('was-validated');
-  });
+$(".regFormLink").click(function(e){
+	$(".reg").click();
+});
+
+$("#resetPass").click(function(e){
+	$(".res").click();
+});
+
+
+

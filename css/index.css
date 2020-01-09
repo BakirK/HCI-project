@@ -20,3 +20,7 @@
     filter: invert(50%);
 }
 
+.res{
+    display: none;
+}
+
