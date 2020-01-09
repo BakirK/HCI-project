@@ -17,5 +17,16 @@
 	width:100%;
 	position:absolute;
 }
-
+.container-fluid {
+	padding-left: 0px;
+}
+.col-sm-9 {
+	padding-right: 0px;
+}
+.col-sm-3 {
+	padding-top: 3vh;
+}
+.saveBtn {
+	margin-top: 1vh;
+}
 
