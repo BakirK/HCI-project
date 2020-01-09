@@ -1,3 +1,4 @@
+@import "forms.css";
 .arrowUp {
     position: absolute;
     left: 50%;
@@ -19,8 +20,3 @@
 .carousel-control-prev {
     filter: invert(50%);
 }
-
-.res{
-    display: none;
-}
-

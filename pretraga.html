@@ -9,56 +9,10 @@
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" crossorigin="anonymous">
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.0/css/all.css" integrity="sha384-lZN37f5QGtY3VHgisS14W3ExzMWZxybE1SJSEsQp9S+oqd12jhcu+A56Ebc1zFSJ" crossorigin="anonymous">
     <link rel="stylesheet" href="css/footer.css">
-    <link rel="stylesheet" href="css/index.css">
+    <link rel="stylesheet" href="css/pretraga.css">
     <title>Vodič kroz grad</title>
   </head>
   <body>
-    <div class="container-fluid text-center jumbotron" style="height:850px; margin-bottom:0;">
-      <h1>Dobrodošli u vodič kroz grad</h1>
-      <h3>Tu smo da vam pomognemo pri snalaženju u gradu</h3><br>
-      <!-- Carousel -->
-      <div id="demo" class="carousel " data-ride="carousel">
-        <!-- Indicators -->
-        <ul class="carousel-indicators">
-          <li data-target="#demo" data-slide-to="0" class="active"></li>
-          <li data-target="#demo" data-slide-to="1"></li>
-          <li data-target="#demo" data-slide-to="2"></li>
-        </ul>
-        
-        <!-- The slideshow -->
-        <div class="carousel-inner">
-          <div class="carousel-item active">
-            <img src="img/homepage.jpg" alt="Error loading image" width="1000px" height="600px">
-            <div class="carousel-caption">
-              <h3>Vijećnica</h3>
-              <p>Ikona grada Sarajeva</p>
-            </div>
-          </div>
-          <div class="carousel-item">
-            <img src="img/homepage.jpg" alt="Error loading image" width="1000px" height="600px">
-            <div class="carousel-caption">
-              <h3>Opet Vijećnica</h3>
-              <p>Opet ikona grada Sarajeva</p>
-            </div>
-          </div>
-          <div class="carousel-item">
-            <img src="img/homepage.jpg" alt="Error loading image" width="1000px" height="600px">
-            <div class="carousel-caption">
-              <h3>I opet Vijećnica</h3>
-              <p>I opet ikona grada Sarajeva</p>
-            </div>
-          </div>
-        </div>
-        
-        <!-- Left and right controls -->
-        <a class="carousel-control-prev" href="#demo" data-slide="prev">
-          <span class="carousel-control-prev-icon"></span>
-        </a>
-        <a class="carousel-control-next" href="#demo" data-slide="next">
-          <span class="carousel-control-next-icon"></span>
-        </a>
-      </div>
-    </div>
 
     <nav class="navbar navbar-expand-md bg-dark navbar-dark sticky-top">
       <!-- Brand -->
@@ -72,11 +26,11 @@
       <!-- Navbar links -->
       <div class="collapse navbar-collapse" id="collapsibleNavbar">
         <ul class="navbar-nav">
-          <li class="nav-item active">
-            <a class="nav-link" href="#">Početna</a>
-          </li>
           <li class="nav-item">
-            <a class="nav-link" href="pretraga.html">Pretraga</a>
+            <a class="nav-link" href="index.html">Početna</a>
+          </li>
+          <li class="nav-item active">
+            <a class="nav-link" href="#">Pretraga</a>
           </li>
           <li class="nav-item">
             <a class="nav-link" href="#">Objekat</a>
@@ -112,19 +66,59 @@
 
 
 
-  <div class="container">
-    <h1>Some text to enable scrolling</h1>
-    <h1>Some text to enable scrolling</h1>
-    <h1>Some text to enable scrolling</h1>
-    <h1>Some text to enable scrolling</h1>
-    <h1>Some text to enable scrolling</h1>
-    <h1>Some text to enable scrolling</h1>
-    <h1>Some text to enable scrolling</h1>
-    <h1>Some text to enable scrolling</h1>
-    <h1>Some text to enable scrolling</h1>
-    <h1>Some text to enable scrolling</h1>
-    <h1>Some text to enable scrolling</h1>
+<div class="container-fluid">
+  <h2>Accordion Example</h2>
+  <p><strong>Note:</strong> The <strong>data-parent</strong> attribute makes sure that all collapsible elements under the specified parent will be closed when one of the collapsible item is shown.</p>
+  <div id="accordion">
+    <div class="card">
+      <div class="card-header">
+        <a class="card-link" data-toggle="collapse" href="#collapseOne">
+          Collapsible Group Item #1
+        </a>
+      </div>
+      <div id="collapseOne" class="collapse show" data-parent="#accordion">
+        <div class="card-body">
+          Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+        </div>
+      </div>
+    </div>
+    <div class="card">
+      <div class="card-header">
+        <a class="collapsed card-link" data-toggle="collapse" href="#collapseTwo">
+        Collapsible Group Item #2
+      </a>
+      </div>
+      <div id="collapseTwo" class="collapse" data-parent="#accordion">
+        <div class="card-body">
+          Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+        </div>
+      </div>
+    </div>
+    <div class="card">
+      <div class="card-header">
+        <a class="collapsed card-link" data-toggle="collapse" href="#collapseThree">
+          Collapsible Group Item #3
+        </a>
+      </div>
+      <div id="collapseThree" class="collapse" data-parent="#accordion">
+        <div class="card-body">
+          Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+        </div>
+      </div>
+    </div>
   </div>
+  <h1>Some text to enable scrolling</h1>
+    <h1>Some text to enable scrolling</h1>
+    <h1>Some text to enable scrolling</h1>
+    <h1>Some text to enable scrolling</h1>
+    <h1>Some text to enable scrolling</h1>
+    <h1>Some text to enable scrolling</h1>
+    <h1>Some text to enable scrolling</h1>
+    <h1>Some text to enable scrolling</h1>
+    <h1>Some text to enable scrolling</h1>
+    <h1>Some text to enable scrolling</h1>
+    <h1>Some text to enable scrolling</h1>
+</div>
 
 
 
@@ -282,13 +276,13 @@
                         </div>
                         <p>Unesite svoj email da bi dobili svoju šifru.</p>
                           <div class="panel-body">
-                              <form action="" class="was-validated passRecover">
+                              <form action="" class="was-validated">
                                 <fieldset>
                                   <div class="form-group">
                                     <input type="email" class="form-control" placeholder="Unesite email" name="emailRes" required>
                                     <div class="valid-feedback mail">Ispravno.</div>
                                     <div class="invalid-feedback">Molimo popunite ovo polje.</div>
-                                  </div>  
+                                  </div>
                                   <input class="btn btn-lg btn-primary btn-block sent" value="Pošalji">
                                 <fieldset>
                               </form>
