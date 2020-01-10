@@ -12,14 +12,31 @@
 .affix + .container-fluid {
   padding-top: 70px;
 }
+
+.carousel-indicators li {
+  display: inline-block;
+  width: 30px;
+  height: 30px;
+  margin: 10px;
+  text-indent: 0;
+  cursor: pointer;
+  border: none;
+  border-radius: 50%;
+  background-color: white;
+}
 .carousel-indicators .active {
-    background-color: red;
+  width: 30px;
+  height: 30px;
+  margin: 10px;
+  background-color: green;
 }
 
-.carousel-control-next,
-.carousel-control-prev {
-    filter: invert(50%);
-}
-.container {
-	height:94vh;
+.carousel-control-prev-icon,
+.carousel-control-next-icon {
+    height: 50px;
+    width: 50px;
+    outline: black;
+    background-color: green;
+    background-size: 100%, 100%;
+    border-radius: 50%;
 }
