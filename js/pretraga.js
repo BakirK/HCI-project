@@ -8,14 +8,25 @@ $(".registerToSaveBtn").click(function(e){
     $("#registracija").click();
 });
 
-$(document).ready(function(){
-  $("#myInput").on("keyup", function() {
-    var value = $(this).val().toLowerCase();
-    $(".searchable").filter(function() {
-      $(this).toggle($(this).text().toLowerCase().indexOf(value) > -1)
+/*search accordion*/
+/*Darko randic - "ima internet" 10.01.2020*/
+(function(){
+  var searchTerm, panelContainerId;
+  // Create a new contains that is case insensitive
+  $.expr[':'].containsCaseInsensitive = function (n, i, m) {
+    return jQuery(n).text().toUpperCase().indexOf(m[3].toUpperCase()) >= 0;
+  };
+  
+  $('#myInput').on('change keyup paste click', function () {
+    searchTerm = $(this).val();
+    $('#accordion > .card').each(function () {
+      panelContainerId = '#' + $(this).attr('id');
+      $(panelContainerId + ':not(:containsCaseInsensitive(' + searchTerm + '))').hide();
+      $(panelContainerId + ':containsCaseInsensitive(' + searchTerm + ')').show();
     });
   });
-});
+}());
+
 
 //autocomplete
 function autocomplete(inp, arr) {
