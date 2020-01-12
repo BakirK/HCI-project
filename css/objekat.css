@@ -65,7 +65,7 @@
 }
 
 .multisteps-form__progress-btn.js-active {
-  color: #007bff;
+  color: #007b5e;
 }
 
 .multisteps-form__progress-btn.js-active:before {
@@ -135,8 +135,14 @@
 .formContainer {
     height: 100vh;
 }
+
+.custom-control-label {
+  color: #007b5e !important;
+}
 @media only screen and (max-width: 768px) {
     .formContainer {
         height: 130vh;
     }
 }
+
+
