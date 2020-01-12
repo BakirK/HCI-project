@@ -514,7 +514,7 @@
                   <label for="pwd">Email:</label>
                   <input type="email" class="form-control" id="emailReg" placeholder="Unesite email" name="emailReg" required>
                   <div class="valid-feedback">Ispravno.</div>
-                  <div class="invalid-feedback">Molimo popunite ovo polje.</div>
+                  <div class="invalid-feedback">Email mora biti validan.</div>
                 </div>
                 <div class="form-group">
                   <label for="uname">Korisničko ime:</label>
@@ -524,9 +524,9 @@
                 </div>
                 <div class="form-group">
                   <label for="pwd">Šifra:</label>
-                  <input type="password" class="form-control" id="pwdReg" placeholder="Unesite šifru" name="pswdReg" required>
+                  <input type="password" class="form-control" id="pwdReg" placeholder="Unesite šifru" pattern=".{8,64}" name="pswdReg" required>
                   <div class="valid-feedback">Ispravno.</div>
-                  <div class="invalid-feedback">Molimo popunite ovo polje.</div>
+                  <div class="invalid-feedback">Min 8 karaktera.</div>
                 </div>
                 <div class="form-group form-check">
                   <label class="form-check-label">
