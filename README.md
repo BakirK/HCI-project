@@ -1,1 +1,1 @@
-# vvs-project
+# HCI - Vodic kroz grad
