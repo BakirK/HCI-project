@@ -129,3 +129,8 @@ document.addEventListener("click", function (e) {
 
 var keywords = ["Usluge", "Tura grada", "Parking", "Autopraonica", "Supermarketi", "Smještaj", "Hoteli", "Hosteli", "Guest house", "Apartmani", "Hrana", "Restaurani", "Fast-food", "Slastičarne", "Buregdžinice", "Ćevabdžinice", "Pića", "Bezalkoholna", "Alkoholna", "Smoothies", "Proteinski", "Muzika", "Rock", "Pop", "Narodna", "Strana", "Transport", "Busevi", "Trolejbusi", "Tramvaji", "Taksi"];
 autocomplete(document.getElementById("myInput"), keywords);
+
+
+
+
+

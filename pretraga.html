@@ -68,8 +68,7 @@
     <div class="container-fluid pl-0">
       <div class="row">
         <div class="col-sm-9 mt-0">
-            <div class="z-depth-1-half map-container">
-              <iframe src="https://www.google.com/maps/embed?pb=!1m14!1m12!1m3!1d11506.963124422757!2d18.413977927679916!3d43.86120119471385!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!5e0!3m2!1sen!2sba!4v1578595926202!5m2!1sen!2sba" frameborder="0" style="border:0;" allowfullscreen=""></iframe>
+            <div class="z-depth-1-half map-container" id="map">
             </div>
         </div>
         
@@ -94,16 +93,22 @@
                   <div class="row">
                     <div class="col searchable">
                       <div class="checkbox">
-                        <label class="checkbox-inline searchable"><input type="checkbox" value=""> Tura grada</label>
+                        <label class="checkbox-inline searchable"><input class="check" name="travel_agency" type="checkbox" value=""> Tura grada</label>
                       </div>
                       <div class="checkbox">
-                        <label class="checkbox-inline searchable"><input type="checkbox" value=""> Parking</label>
+                        <label class="checkbox-inline searchable"><input class="check" name="parking" type="checkbox" value=""> Parking</label>
                       </div>
                       <div class="checkbox">
-                        <label class="checkbox-inline searchable"><input type="checkbox" value=""> Autopraonica</label>
+                        <label class="checkbox-inline searchable"><input class="check" name="car_wash" type="checkbox" value=""> Autopraonica</label>
                       </div>
                       <div class="checkbox">
-                        <label class="checkbox-inline searchable"><input type="checkbox" value=""> Supermarketi</label>
+                        <label class="checkbox-inline searchable"><input class="check" name="gas_station" type="checkbox" value=""> Benzinska pumpa</label>
+                      </div>
+                      <div class="checkbox">
+                        <label class="checkbox-inline searchable"><input class="check" name="laundry"  type="checkbox" value=""> Pranje veša</label>
+                      </div>
+                      <div class="checkbox">
+                        <label class="checkbox-inline searchable"><input class="check" name="lodging" type="checkbox" value=""> Smještaj</label>
                       </div>
                     </div>
                   </div>
@@ -113,24 +118,27 @@
             <div class="card" id="card2">
               <div class="card-header" data-toggle="collapse" href="#collapseTwo">
                 <a class="collapsed card-link">
-                Smještaj
-              </a>
+                	Prodavnice
+              	</a>
               </div>
               <div id="collapseTwo" class="collapse" data-parent="#accordion">
                 <div class="card-body">
                   <div class="row">
                     <div class="col searchable">
                       <div class="checkbox">
-                        <label class="checkbox-inline searchable"><input type="checkbox" value=""> Hoteli</label>
+                        <label class="checkbox-inline searchable"><input class="check" name="grocery_or_supermarket" type="checkbox" value=""> Supermarket</label>
                       </div>
                       <div class="checkbox">
-                        <label class="checkbox-inline searchable"><input type="checkbox" value=""> Hosteli</label>
+                        <label class="checkbox-inline searchable"><input class="check" name="home_goods_store" type="checkbox" value=""> Namještaj i kućne stvari</label>
                       </div>
                       <div class="checkbox">
-                        <label class="checkbox-inline searchable"><input type="checkbox" value=""> Guest house</label>
+                        <label class="checkbox-inline searchable"><input class="check" name="jewelry_store" type="checkbox" value=""> Nakit</label>
                       </div>
                       <div class="checkbox">
-                        <label class="checkbox-inline searchable"><input type="checkbox" value=""> Apartmani</label>
+                        <label class="checkbox-inline searchable"><input class="check" name="liquor_store" type="checkbox" value=""> Alkohol</label>
+                      </div>
+                      <div class="checkbox">
+                        <label class="checkbox-inline searchable"><input class="check" name="shopping_mall" type="checkbox" value=""> Tržni centri</label>
                       </div>
                     </div>
                   </div>
@@ -140,7 +148,7 @@
             <div class="card" id="card3">
               <div class="card-header" data-toggle="collapse" href="#collapseThree">
                 <a class="collapsed card-link">
-                  Hrana
+                  Hrana i piće
                 </a>
               </div>
               <div id="collapseThree" class="collapse" data-parent="#accordion">
@@ -148,19 +156,19 @@
                   <div class="row">
                     <div class="col searchable">
                       <div class="checkbox">
-                        <label class="checkbox-inline searchable"><input type="checkbox" value=""> Restaurani</label>
+                        <label class="checkbox-inline searchable"><input class="check" name="restaurant" type="checkbox" value=""> Restaurani</label>
                       </div>
                       <div class="checkbox">
-                        <label class="checkbox-inline searchable"><input type="checkbox" value=""> Fast-food</label>
+                        <label class="checkbox-inline searchable"><input class="check" name="bar" type="checkbox" value=""> Bar</label>
                       </div>
                       <div class="checkbox">
-                        <label class="checkbox-inline searchable"><input type="checkbox" value=""> Slastičarne</label>
+                        <label class="checkbox-inline searchable"><input class="check" name="cafe" type="checkbox" value=""> Cafe</label>
                       </div>
                       <div class="checkbox">
-                        <label class="checkbox-inline searchable"><input type="checkbox" value=""> Buregdžinice</label>
+                        <label class="checkbox-inline searchable"><input class="check" name="bakery" type="checkbox" value=""> Pekare</label>
                       </div>
                       <div class="checkbox">
-                        <label class="checkbox-inline searchable"><input type="checkbox" value=""> Ćevabdžinice</label>
+                        <label class="checkbox-inline searchable"><input class="check" name="night_club" type="checkbox" value=""> Noćni klubovi</label>
                       </div>
                     </div>
                   </div>
@@ -170,7 +178,7 @@
             <div class="card" id="card4">
               <div class="card-header" data-toggle="collapse" href="#collapseFour">
                 <a class="collapsed card-link">
-                  Pića
+                  Mjesta
                 </a>
               </div>
               <div id="collapseFour" class="collapse" data-parent="#accordion">
@@ -178,16 +186,25 @@
                   <div class="row">
                     <div class="col searchable">
                       <div class="checkbox">
-                        <label class="checkbox-inline searchable"><input type="checkbox" value=""> Bezalkoholna</label>
+                        <label class="checkbox-inline searchable"><input class="check" name="bank" type="checkbox" value=""> Banke</label>
                       </div>
                       <div class="checkbox">
-                        <label class="checkbox-inline searchable"><input type="checkbox" value=""> Alkoholna</label>
+                        <label class="checkbox-inline searchable"><input class="check" name="atm" type="checkbox" value=""> Automati</label>
                       </div>
                       <div class="checkbox">
-                        <label class="checkbox-inline searchable"><input type="checkbox" value=""> Smoothies</label>
+                        <label class="checkbox-inline searchable"><input class="check" name="embassy" type="checkbox" value=""> Ambasade</label>
                       </div>
                       <div class="checkbox">
-                        <label class="checkbox-inline searchable"><input type="checkbox" value=""> Proteinski</label>
+                        <label class="checkbox-inline searchable"><input class="check" name="gym" type="checkbox" value=""> Teretane</label>
+                      </div>
+                      <div class="checkbox">
+                        <label class="checkbox-inline searchable"><input class="check" name="library" type="checkbox" value=""> Biblioteke</label>
+                      </div>
+                      <div class="checkbox">
+                        <label class="checkbox-inline searchable"><input class="check" name="zoo" type="checkbox" value=""> Zoološki vrt</label>
+                      </div>
+                      <div class="checkbox">
+                        <label class="checkbox-inline searchable"><input class="check" name="museum" type="checkbox" value=""> Muzeji</label>
                       </div>
                     </div>
                   </div>
@@ -195,33 +212,6 @@
               </div>
             </div>
             <div class="card" id="card5">
-              <div class="card-header" data-toggle="collapse" href="#collapseFive">
-                <a class="collapsed card-link">
-                  Muzika
-                </a>
-              </div>
-              <div id="collapseFive" class="collapse" data-parent="#accordion">
-                <div class="card-body">
-                  <div class="row">
-                    <div class="col searchable">
-                      <div class="checkbox">
-                        <label class="checkbox-inline searchable"><input type="checkbox" value=""> Rock</label>
-                      </div>
-                      <div class="checkbox">
-                        <label class="checkbox-inline searchable"><input type="checkbox" value=""> Pop</label>
-                      </div>
-                      <div class="checkbox">
-                        <label class="checkbox-inline searchable"><input type="checkbox" value=""> Narodna</label>
-                      </div>
-                      <div class="checkbox">
-                        <label class="checkbox-inline searchable"><input type="checkbox" value=""> Strana</label>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
-            <div class="card" id="card6">
               <div class="card-header" data-toggle="collapse" href="#collapseSix">
                 <a class="collapsed card-link">
                   Transport
@@ -232,19 +222,19 @@
                   <div class="row">
                     <div class="col searchable">
                       <div class="checkbox">
-                        <label class="checkbox-inline searchable"><input type="checkbox" value=""> Komercijalni busevi</label>
+                        <label class="checkbox-inline searchable"><input class="check" name="bus_station" type="checkbox" value=""> Busevi</label>
                       </div>
                       <div class="checkbox">
-                        <label class="checkbox-inline searchable"><input type="checkbox" value=""> Trolejbusi</label>
+                        <label class="checkbox-inline searchable"><input class="check" name="light_rail_station" type="checkbox" value=""> Tramvaji</label>
                       </div>
                       <div class="checkbox">
-                        <label class="checkbox-inline searchable"><input type="checkbox" value=""> Busevi</label>
+                        <label class="checkbox-inline searchable"><input class="check" name="taxi_stand" type="checkbox" value=""> Taksi</label>
                       </div>
                       <div class="checkbox">
-                        <label class="checkbox-inline searchable"><input type="checkbox" value=""> Tramvaji</label>
+                        <label class="checkbox-inline searchable"><input class="check" name="car_rental" type="checkbox" value=""> Rent a car</label>
                       </div>
                       <div class="checkbox">
-                        <label class="checkbox-inline searchable"><input type="checkbox" value=""> Taksi</label>
+                        <label class="checkbox-inline searchable"><input class="check" name="airport" type="checkbox" value=""> Aerodrom</label>
                       </div>
                     </div>
                   </div>
@@ -538,5 +528,10 @@
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" crossorigin="anonymous"></script>
     <script src="js/form.js"></script>
     <script src="js/pretraga.js"></script>
+    
+	<script src="js/mapInit.js"></script>
+    <script async defer
+    </script>
+	<script src="js/mapIcons.js"></script>
   </body>
 </html>
