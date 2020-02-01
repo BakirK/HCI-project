@@ -63,8 +63,8 @@ function createMarker(place) {
   var marker = new google.maps.Marker({
     position: placeLoc,
     icon: icons[place.types[0]].icon,
-    map: map,
-    label: { color: "#000000", fontSize: '12px', text: place.name }
+    map: map/*,
+    label: { color: "#000000", fontSize: '12px', text: place.name }*/
   });
   var infoWindow = new google.maps.InfoWindow({content: place.name});
   google.maps.event.addListener(marker, 'click', function() {
