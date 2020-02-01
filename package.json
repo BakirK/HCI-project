@@ -1,0 +1,23 @@
+{
+  "name": "icr-project",
+  "version": "1.0.0",
+  "description": "vodic kroz grad",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/BakirK/vvs-project.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/BakirK/vvs-project/issues"
+  },
+  "homepage": "https://github.com/BakirK/vvs-project#readme",
+  "dependencies": {
+    "dotenv": "^8.2.0",
+    "express": "^4.17.1"
+  }
+}
