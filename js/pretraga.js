@@ -127,7 +127,9 @@ document.addEventListener("click", function (e) {
 }
 
 
-var keywords = ["Usluge", "Tura grada", "Parking", "Autopraonica", "Supermarketi", "Smještaj", "Hoteli", "Hosteli", "Guest house", "Apartmani", "Hrana", "Restaurani", "Fast-food", "Slastičarne", "Buregdžinice", "Ćevabdžinice", "Pića", "Bezalkoholna", "Alkoholna", "Smoothies", "Proteinski", "Muzika", "Rock", "Pop", "Narodna", "Strana", "Transport", "Busevi", "Trolejbusi", "Tramvaji", "Taksi"];
+var keywords = ["Usluge", "Tura grada", "Parking", "Autopraonica", "Benzinska pumpa", "Pranje veša", "Hoteli i smještaj", "Prodavnice", "Supermarketi", "Namještaj i kućne stvari",
+ "Nakit", "Alkohol", "Tržni centri", "Hrana i piće", "Restaurani", "Barovi", "Cafe", "Pekare", "Noćni klubovi", 
+ "Mjesta", "Banke", "Automati", "Ambasade", "Teretane", "Biblioteke", "Zoološki vrt", "Muzeji", "Transport", "Busevi", "Tramvaji", "Taksi", "Rent a car", "Aerodromi"];
 autocomplete(document.getElementById("myInput"), keywords);
 
 

@@ -3,7 +3,7 @@
   <head>
     <!-- Required meta tags -->
     <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
 
     <!-- Bootstrap CSS -->
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" crossorigin="anonymous">
@@ -66,22 +66,30 @@
 
 
     <div class="container-fluid pl-0">
+    	<div class="pac-card" id="pac-card">
+      		<input class="form-control mx-2 my-2" id="pac-input" type="text" placeholder="Pretraži mjesta, adrese, objekte..">
+		</div>
       <div class="row">
-        <div class="col-sm-9 mt-0">
+        <div class="col-sm-9 mt-0 pr-0">
             <div class="z-depth-1-half map-container" id="map">
             </div>
+            <div id="infowindow-content">
+		      <img src="" width="16" height="16" id="place-icon">
+		      <span id="place-name"  class="title"></span><br>
+		      <span id="place-address"></span>
+		    </div>
         </div>
         
-        <div class="col-sm-3 pt-3">
-            <p class="ml-1" >Parametri pretrage:</p>
+        <div class="col-sm-3 pt-3 pr-xs-0">
+        	<p class="pl-2" >Parametri pretrage:</p>
           <div id="accordion">
-
-            <form autocomplete="off" class="pb-3 mb-5">
-              <div class="autocomplete float-md-right float-sm-left">
-                <input class="form-control" id="myInput" type="text" placeholder="Pretraži..">
-              </div>
-            </form>
-            
+          	<div class="row pl-2">
+	              <div class="autocomplete col-12 mb-2 float-md-right float-sm-left">
+		            <form autocomplete="off" class="" style="width: 100%">
+		                <input class="form-control" id="myInput" type="text" placeholder="Pretraži kategorije">
+		            </form>
+	              </div>
+            </div>
             <div class="card" id="card1">
               <div class="card-header" data-toggle="collapse" href="#collapseOne">
                 <a class="card-link">
@@ -108,7 +116,7 @@
                         <label class="checkbox-inline searchable"><input class="check" name="laundry"  type="checkbox" value=""> Pranje veša</label>
                       </div>
                       <div class="checkbox">
-                        <label class="checkbox-inline searchable"><input class="check" name="lodging" type="checkbox" value=""> Smještaj</label>
+                        <label class="checkbox-inline searchable"><input class="check" name="lodging" type="checkbox" value=""> Hoteli i smještaj</label>
                       </div>
                     </div>
                   </div>
@@ -126,7 +134,7 @@
                   <div class="row">
                     <div class="col searchable">
                       <div class="checkbox">
-                        <label class="checkbox-inline searchable"><input class="check" name="grocery_or_supermarket" type="checkbox" value=""> Supermarket</label>
+                        <label class="checkbox-inline searchable"><input class="check" name="grocery_or_supermarket" type="checkbox" value=""> Supermarketi</label>
                       </div>
                       <div class="checkbox">
                         <label class="checkbox-inline searchable"><input class="check" name="home_goods_store" type="checkbox" value=""> Namještaj i kućne stvari</label>
@@ -159,7 +167,7 @@
                         <label class="checkbox-inline searchable"><input class="check" name="restaurant" type="checkbox" value=""> Restaurani</label>
                       </div>
                       <div class="checkbox">
-                        <label class="checkbox-inline searchable"><input class="check" name="bar" type="checkbox" value=""> Bar</label>
+                        <label class="checkbox-inline searchable"><input class="check" name="bar" type="checkbox" value=""> Barovi</label>
                       </div>
                       <div class="checkbox">
                         <label class="checkbox-inline searchable"><input class="check" name="cafe" type="checkbox" value=""> Cafe</label>
@@ -234,7 +242,7 @@
                         <label class="checkbox-inline searchable"><input class="check" name="car_rental" type="checkbox" value=""> Rent a car</label>
                       </div>
                       <div class="checkbox">
-                        <label class="checkbox-inline searchable"><input class="check" name="airport" type="checkbox" value=""> Aerodrom</label>
+                        <label class="checkbox-inline searchable"><input class="check" name="airport" type="checkbox" value=""> Aerodromi</label>
                       </div>
                     </div>
                   </div>
@@ -245,11 +253,50 @@
             <div class="col text-center my-3">
               <button class="btn btn-success" href="#loginToSaveModal" data-toggle="modal" data-target="#loginToSaveModal" style="background-color: #007b5e !important;">
                 Spasi pretragu
-                </button>
+              </button>
             </div>
         </div>
       </div>
     </div>
+
+
+
+
+<!-- map info bubble beg-->
+	<div style="display: none">
+	  <div id="info-content">
+	    <table>
+	      <tr id="iw-url-row" class="iw_table_row">
+	        <td id="iw-icon" class="iw_table_icon"></td>
+	        <td id="iw-url"></td>
+	      </tr>
+	      <tr id="iw-address-row" class="iw_table_row">
+	        <td class="iw_attribute_name">Adresa:</td>
+	        <td id="iw-address"></td>
+	      </tr>
+	      <tr id="iw-phone-row" class="iw_table_row">
+	        <td class="iw_attribute_name">Telefon:</td>
+	        <td id="iw-phone"></td>
+	      </tr>
+	      <tr id="iw-rating-row" class="iw_table_row">
+	        <td class="iw_attribute_name">Ocjena:</td>
+	        <td id="iw-rating"></td>
+	      </tr>
+	      <tr id="iw-website-row" class="iw_table_row">
+	        <td class="iw_attribute_name">Stranica:</td>
+	        <td id="iw-website"></td>
+	      </tr>
+	    </table>
+	  </div>
+	</div>
+<!--map info bubble end--> 
+
+
+
+
+
+
+
 
 
 
@@ -283,8 +330,6 @@
       </div>
     </div>
   </div>
-
-
 
 
 
@@ -528,9 +573,9 @@
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" crossorigin="anonymous"></script>
     <script src="js/form.js"></script>
     <script src="js/pretraga.js"></script>
-    
-	<script src="js/mapInit.js"></script>
-    <script async defer
+
+    <script src="js/mapInit.js"></script>
+    <script src="https://maps.googleapis.com/maps/api/js?key=YOUREY&libraries=places&callback=initMap" async defer>
     </script>
 	<script src="js/mapIcons.js"></script>
   </body>

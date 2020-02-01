@@ -1,22 +1,10 @@
-@media only screen and (min-width: 768px) {
-  .map-container {
-		height: 91vh;
-	}
-}
 .map-container {
 	overflow:hidden;
-	padding-bottom:56.25%;
 	position:relative;
 	height:94vh;
 }
-.map-container iframe {
-	left:0;
-	top:0;
-	height:100%;
-	width:100%;
-	position:absolute;
-}
-/*autocomplete*/
+
+/*autocomplete categories*/
 .autocomplete-items {
   position: absolute;
   border: 1px solid #d4d4d4;
@@ -28,23 +16,66 @@
   left: 0;
   right: 0;
 }
+
 .autocomplete-items div {
   padding: 10px;
   cursor: pointer;
   background-color: #fff;
   border-bottom: 1px solid #d4d4d4;
 }
+
 .autocomplete-items div:hover {
   /*when hovering an item:*/
   background-color: #e9e9e9;
 }
+
 .autocomplete-active {
   /*when navigating through the items using the arrow keys:*/
   background-color: DodgerBlue !important;
   color: #ffffff;
 }
+
 .autocomplete {
   /*the container must be positioned relative:*/
   position: relative;
   display: inline-block;
+}
+
+/*autocpmplete map*/
+#pac-input {
+  background-color: #fff;
+  font-family: Roboto;
+  font-size: 17px;
+  font-weight: 300;
+  text-overflow: ellipsis;
+  display: block;
+  margin : 0 auto;
+}
+#pac-card {
+  width: 50%;
+}
+
+#pac-input:focus {
+  border-color: #4d90fe;
+}
+
+#infowindow-content .title {
+  font-weight: bold;
+}
+
+#infowindow-content {
+  display: none;
+}
+
+#map #infowindow-content {
+  display: inline;
+}
+
+@media screen and (max-width: 768px) {
+  .map-container {
+    height: 91vh;
+  }
+  #pac-input {
+    font-size: 14px;
+  }
 }
