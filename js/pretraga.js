@@ -116,14 +116,14 @@ function autocomplete(inp, arr) {
     var x = document.getElementsByClassName("autocomplete-items");
     for (var i = 0; i < x.length; i++) {
       if (elmnt != x[i] && elmnt != inp) {
-      x[i].parentNode.removeChild(x[i]);
+        x[i].parentNode.removeChild(x[i]);
+      }
     }
   }
-}
-/*execute a function when someone clicks in the document:*/
-document.addEventListener("click", function (e) {
-    closeAllLists(e.target);
-});
+  /*execute a function when someone clicks in the document:*/
+  document.addEventListener("click", function (e) {
+      closeAllLists(e.target);
+  });
 }
 
 
@@ -132,7 +132,26 @@ var keywords = ["Usluge", "Tura grada", "Parking", "Autopraonica", "Benzinska pu
  "Mjesta", "Banke", "Automati", "Ambasade", "Teretane", "Biblioteke", "Zoološki vrt", "Muzeji", "Transport", "Busevi", "Tramvaji", "Taksi", "Rent a car", "Aerodromi"];
 autocomplete(document.getElementById("myInput"), keywords);
 
-
-
-
-
+/*
+ $("#refreshBtn").click(function() {
+  alert("clicked");
+    var checkBoxes = $(".checkbox input[type=checkbox]:checked").get();
+    //refreshBtn.disabled = true;
+    for (var i = checkBoxes.length - 1; i >= 0; i--) {
+      console.log(checkBoxes[i].name);
+      /*request = {
+        bounds:map.getBounds(),
+        types: [checkBoxes[i].name],
+        language : 'bs'
+      };
+      service.nearbySearch(request, function(results, status) {
+        if (status == google.maps.places.PlacesServiceStatus.OK) {
+          let markerTypeTemp = checkBoxes[i].name;
+          for (var i = 0; i < results.length; i++) {
+            var place = results[i];
+            createMarker(place);
+          }
+        }
+      });
+    }
+  });*/

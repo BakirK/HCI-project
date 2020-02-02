@@ -68,7 +68,12 @@
     <div class="container-fluid pl-0">
     	<div class="pac-card" id="pac-card">
       		<input class="form-control mx-2 my-2" id="pac-input" type="text" placeholder="Pretraži mjesta, adrese, objekte..">
-		</div>
+		  </div>
+      <div class="text-center">
+        <button class="btn" id="refreshBtn">
+          <img src="icons/refresh.png">
+        </button>
+      </div>
       <div class="row">
         <div class="col-sm-9 mt-0 pr-0">
             <div class="z-depth-1-half map-container" id="map">
@@ -291,7 +296,7 @@
           <td id="iw-price"></td>
         </tr>
         <tr id="iw-open-row" class="iw_table_row">
-          <td class="iw_attribute_name">Otvoreno:</td>
+          <td class="iw_attribute_name">Status:</td>
           <td id="iw-open"></td>
         </tr>
         <tr id="iw-open-hours-row" class="iw_table_row">
@@ -613,10 +618,12 @@
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" crossorigin="anonymous"></script>
     <script src="js/form.js"></script>
     <script src="js/pretraga.js"></script>
+    
     <script src="js/mapInit.js"></script>
     <script src="js/mapIcons.js"></script>
     <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCeJLveAW9reXowkdJCjlDoMf4mNpn5pzc&libraries=places&callback=initMap" async defer>
     </script>
-	<script src="js/mapIcons.js"></script>
+  <!--
+-->
   </body>
 </html>
