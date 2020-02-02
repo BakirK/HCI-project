@@ -107,13 +107,7 @@ function initMap() {
       infoWindow.open(map, marker);
     });*/
     /*var address = '';
-    if (place.address_components) {
-      address = [
-        (place.address_components[0] && place.address_components[0].short_name || ''),
-        (place.address_components[1] && place.address_components[1].short_name || ''),
-        (place.address_components[2] && place.address_components[2].short_name || '')
-      ].join(' ');
-    }
+    
 
     infowindowContent.children['place-icon'].src = place.icon;
     infowindowContent.children['place-name'].textContent = place.name;
@@ -169,7 +163,6 @@ function buildIWContent(place) {
   document.getElementById('iw-url').innerHTML = '<b><a href="' + place.url +
       '">' + place.name + '</a></b>';
   document.getElementById('iw-address').textContent = place.vicinity;
-
   if (place.formatted_phone_number) {
     document.getElementById('iw-phone-row').style.display = '';
     document.getElementById('iw-phone').textContent =
@@ -206,7 +199,7 @@ function buildIWContent(place) {
       fullUrl = website;
     }
     document.getElementById('iw-website-row').style.display = '';
-    document.getElementById('iw-website').textContent = website;
+    document.getElementById('iw-website').textContent = place.website;
   } else {
     document.getElementById('iw-website-row').style.display = 'none';
   }
