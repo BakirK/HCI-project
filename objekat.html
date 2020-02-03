@@ -65,8 +65,7 @@
 
 
 
-
-
+<h1> tekst</h1>
 
   <div class="formContainer">
     <div class="multisteps-form">
@@ -84,7 +83,7 @@
       <!--form panels-->
       <div class="row mb-5">
         <div class="col-12 col-lg-8 m-auto">
-          <form class="multisteps-form__form was-validated">
+          <form class="multisteps-form__form">
             <!--single form panel-->
             <div class="multisteps-form__panel shadow p-4 rounded bg-white js-active" data-animation="scaleIn">
               <h3 class="multisteps-form__title">Podaci o objektu</h3>
@@ -159,175 +158,166 @@
                   <div class="col">
                     <!-- kategorije accordion-->
                     <div id="accordion">
-                      <div class="card">
-                        <div class="card-header" data-toggle="collapse" href="#collapseOne">
-                          <a class="card-link">
-                            Usluge
-                          </a>
-                        </div>
-                        <div id="collapseOne" class="collapse show" data-parent="#accordion">
-                          <div class="card-body">
-                            <div class="row">
-                              <div class="col">
-                                <div class="checkbox">
-                                  <label class="checkbox-inline"><input type="checkbox" value=""> Tura grada</label>
-                                </div>
-                                <div class="checkbox">
-                                  <label class="checkbox-inline"><input type="checkbox" value=""> Parking</label>
-                                </div>
-                                <div class="checkbox">
-                                  <label class="checkbox-inline"><input type="checkbox" value=""> Autopraonica</label>
-                                </div>
-                                <div class="checkbox">
-                                  <label class="checkbox-inline"><input type="checkbox" value=""> Supermarketi</label>
-                                </div>
-                              </div>
-                            </div>
-                          </div>
-                        </div>
+            <div class="card" id="card1">
+              <div class="card-header" data-toggle="collapse" href="#collapseOne">
+                <a class="card-link">
+                  Usluge
+                </a>
+              </div>
+              <div id="collapseOne" class="collapse show" data-parent="#accordion">
+                <div class="card-body">
+                  <div class="row">
+                    <div class="col searchable">
+                      <div class="checkbox">
+                        <label class="checkbox-inline searchable"><input class="check" name="travel_agency" type="checkbox" value=""> Tura grada</label>
                       </div>
-                      <div class="card">
-                        <div class="card-header" data-toggle="collapse" href="#collapseTwo">
-                          <a class="collapsed card-link">
-                          Smještaj
-                        </a>
-                        </div>
-                        <div id="collapseTwo" class="collapse" data-parent="#accordion">
-                          <div class="card-body">
-                            <div class="row">
-                              <div class="col">
-                                <div class="checkbox">
-                                  <label class="checkbox-inline"><input type="checkbox" value=""> Hoteli</label>
-                                </div>
-                                <div class="checkbox">
-                                  <label class="checkbox-inline"><input type="checkbox" value=""> Hosteli</label>
-                                </div>
-                                <div class="checkbox">
-                                  <label class="checkbox-inline"><input type="checkbox" value=""> Guest house</label>
-                                </div>
-                                <div class="checkbox">
-                                  <label class="checkbox-inline"><input type="checkbox" value=""> Apartmani</label>
-                                </div>
-                              </div>
-                            </div>
-                          </div>
-                        </div>
+                      <div class="checkbox">
+                        <label class="checkbox-inline searchable"><input class="check" name="parking" type="checkbox" value=""> Parking</label>
                       </div>
-                      <div class="card">
-                        <div class="card-header" data-toggle="collapse" href="#collapseThree">
-                          <a class="collapsed card-link">
-                            Hrana
-                          </a>
-                        </div>
-                        <div id="collapseThree" class="collapse" data-parent="#accordion">
-                          <div class="card-body">
-                            <div class="row">
-                              <div class="col">
-                                <div class="checkbox">
-                                  <label class="checkbox-inline"><input type="checkbox" value=""> Restaurani</label>
-                                </div>
-                                <div class="checkbox">
-                                  <label class="checkbox-inline"><input type="checkbox" value=""> Fast-food</label>
-                                </div>
-                                <div class="checkbox">
-                                  <label class="checkbox-inline"><input type="checkbox" value=""> Slastičarne</label>
-                                </div>
-                                <div class="checkbox">
-                                  <label class="checkbox-inline"><input type="checkbox" value=""> Buregdžinice</label>
-                                </div>
-                                <div class="checkbox">
-                                  <label class="checkbox-inline"><input type="checkbox" value=""> Ćevabdžinice</label>
-                                </div>
-                              </div>
-                            </div>
-                          </div>
-                        </div>
+                      <div class="checkbox">
+                        <label class="checkbox-inline searchable"><input class="check" name="car_wash" type="checkbox" value=""> Autopraonica</label>
                       </div>
-                      <div class="card">
-                        <div class="card-header" data-toggle="collapse" href="#collapseFour">
-                          <a class="collapsed card-link">
-                            Pića
-                          </a>
-                        </div>
-                        <div id="collapseFour" class="collapse" data-parent="#accordion">
-                          <div class="card-body">
-                            <div class="row">
-                              <div class="col">
-                                <div class="checkbox">
-                                  <label class="checkbox-inline"><input type="checkbox" value=""> Bezalkoholna</label>
-                                </div>
-                                <div class="checkbox">
-                                  <label class="checkbox-inline"><input type="checkbox" value=""> Alkoholna</label>
-                                </div>
-                                <div class="checkbox">
-                                  <label class="checkbox-inline"><input type="checkbox" value=""> Smoothies</label>
-                                </div>
-                                <div class="checkbox">
-                                  <label class="checkbox-inline"><input type="checkbox" value=""> Proteinski</label>
-                                </div>
-                              </div>
-                            </div>
-                          </div>
-                        </div>
+                      <div class="checkbox">
+                        <label class="checkbox-inline searchable"><input class="check" name="gas_station" type="checkbox" value=""> Benzinska pumpa</label>
                       </div>
-                      <div class="card">
-                        <div class="card-header" data-toggle="collapse" href="#collapseFive">
-                          <a class="collapsed card-link">
-                            Muzika
-                          </a>
-                        </div>
-                        <div id="collapseFive" class="collapse" data-parent="#accordion">
-                          <div class="card-body">
-                            <div class="row">
-                              <div class="col">
-                                <div class="checkbox">
-                                  <label class="checkbox-inline"><input type="checkbox" value=""> Rock</label>
-                                </div>
-                                <div class="checkbox">
-                                  <label class="checkbox-inline"><input type="checkbox" value=""> Pop</label>
-                                </div>
-                                <div class="checkbox">
-                                  <label class="checkbox-inline"><input type="checkbox" value=""> Narodna</label>
-                                </div>
-                                <div class="checkbox">
-                                  <label class="checkbox-inline"><input type="checkbox" value=""> Strana</label>
-                                </div>
-                              </div>
-                            </div>
-                          </div>
-                        </div>
+                      <div class="checkbox">
+                        <label class="checkbox-inline searchable"><input class="check" name="laundry"  type="checkbox" value=""> Pranje veša</label>
                       </div>
-                      <div class="card">
-                        <div class="card-header" data-toggle="collapse" href="#collapseSix">
-                          <a class="collapsed card-link">
-                            Transport
-                          </a>
-                        </div>
-                        <div id="collapseSix" class="collapse" data-parent="#accordion">
-                          <div class="card-body">
-                            <div class="row">
-                              <div class="col">
-                                <div class="checkbox">
-                                  <label class="checkbox-inline"><input type="checkbox" value=""> Komercijalni busevi</label>
-                                </div>
-                                <div class="checkbox">
-                                  <label class="checkbox-inline"><input type="checkbox" value=""> Trolejbusi</label>
-                                </div>
-                                <div class="checkbox">
-                                  <label class="checkbox-inline"><input type="checkbox" value=""> Busevi</label>
-                                </div>
-                                <div class="checkbox">
-                                  <label class="checkbox-inline"><input type="checkbox" value=""> Tramvaji</label>
-                                </div>
-                                <div class="checkbox">
-                                  <label class="checkbox-inline"><input type="checkbox" value=""> Taksi</label>
-                                </div>
-                              </div>
-                            </div>
-                          </div>
-                        </div>
+                      <div class="checkbox">
+                        <label class="checkbox-inline searchable"><input class="check" name="lodging" type="checkbox" value=""> Hoteli i smještaj</label>
                       </div>
                     </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="card" id="card2">
+              <div class="card-header" data-toggle="collapse" href="#collapseTwo">
+                <a class="collapsed card-link">
+                  Prodavnice
+                </a>
+              </div>
+              <div id="collapseTwo" class="collapse" data-parent="#accordion">
+                <div class="card-body">
+                  <div class="row">
+                    <div class="col searchable">
+                      <div class="checkbox">
+                        <label class="checkbox-inline searchable"><input class="check" name="grocery_or_supermarket" type="checkbox" value=""> Supermarketi</label>
+                      </div>
+                      <div class="checkbox">
+                        <label class="checkbox-inline searchable"><input class="check" name="home_goods_store" type="checkbox" value=""> Namještaj i kućne stvari</label>
+                      </div>
+                      <div class="checkbox">
+                        <label class="checkbox-inline searchable"><input class="check" name="jewelry_store" type="checkbox" value=""> Nakit</label>
+                      </div>
+                      <div class="checkbox">
+                        <label class="checkbox-inline searchable"><input class="check" name="liquor_store" type="checkbox" value=""> Alkohol</label>
+                      </div>
+                      <div class="checkbox">
+                        <label class="checkbox-inline searchable"><input class="check" name="shopping_mall" type="checkbox" value=""> Tržni centri</label>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="card" id="card3">
+              <div class="card-header" data-toggle="collapse" href="#collapseThree">
+                <a class="collapsed card-link">
+                  Hrana i piće
+                </a>
+              </div>
+              <div id="collapseThree" class="collapse" data-parent="#accordion">
+                <div class="card-body">
+                  <div class="row">
+                    <div class="col searchable">
+                      <div class="checkbox">
+                        <label class="checkbox-inline searchable"><input class="check" name="restaurant" type="checkbox" value=""> Restaurani</label>
+                      </div>
+                      <div class="checkbox">
+                        <label class="checkbox-inline searchable"><input class="check" name="bar" type="checkbox" value=""> Barovi</label>
+                      </div>
+                      <div class="checkbox">
+                        <label class="checkbox-inline searchable"><input class="check" name="cafe" type="checkbox" value=""> Cafe</label>
+                      </div>
+                      <div class="checkbox">
+                        <label class="checkbox-inline searchable"><input class="check" name="bakery" type="checkbox" value=""> Pekare</label>
+                      </div>
+                      <div class="checkbox">
+                        <label class="checkbox-inline searchable"><input class="check" name="night_club" type="checkbox" value=""> Noćni klubovi</label>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="card" id="card4">
+              <div class="card-header" data-toggle="collapse" href="#collapseFour">
+                <a class="collapsed card-link">
+                  Mjesta
+                </a>
+              </div>
+              <div id="collapseFour" class="collapse" data-parent="#accordion">
+                <div class="card-body">
+                  <div class="row">
+                    <div class="col searchable">
+                      <div class="checkbox">
+                        <label class="checkbox-inline searchable"><input class="check" name="bank" type="checkbox" value=""> Banke</label>
+                      </div>
+                      <div class="checkbox">
+                        <label class="checkbox-inline searchable"><input class="check" name="atm" type="checkbox" value=""> Automati</label>
+                      </div>
+                      <div class="checkbox">
+                        <label class="checkbox-inline searchable"><input class="check" name="embassy" type="checkbox" value=""> Ambasade</label>
+                      </div>
+                      <div class="checkbox">
+                        <label class="checkbox-inline searchable"><input class="check" name="gym" type="checkbox" value=""> Teretane</label>
+                      </div>
+                      <div class="checkbox">
+                        <label class="checkbox-inline searchable"><input class="check" name="library" type="checkbox" value=""> Biblioteke</label>
+                      </div>
+                      <div class="checkbox">
+                        <label class="checkbox-inline searchable"><input class="check" name="zoo" type="checkbox" value=""> Zoološki vrt</label>
+                      </div>
+                      <div class="checkbox">
+                        <label class="checkbox-inline searchable"><input class="check" name="museum" type="checkbox" value=""> Muzeji</label>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="card" id="card5">
+              <div class="card-header" data-toggle="collapse" href="#collapseSix">
+                <a class="collapsed card-link">
+                  Transport
+                </a>
+              </div>
+              <div id="collapseSix" class="collapse" data-parent="#accordion">
+                <div class="card-body">
+                  <div class="row">
+                    <div class="col searchable">
+                      <div class="checkbox">
+                        <label class="checkbox-inline searchable"><input class="check" name="bus_station" type="checkbox" value=""> Busevi</label>
+                      </div>
+                      <div class="checkbox">
+                        <label class="checkbox-inline searchable"><input class="check" name="light_rail_station" type="checkbox" value=""> Tramvaji</label>
+                      </div>
+                      <div class="checkbox">
+                        <label class="checkbox-inline searchable"><input class="check" name="taxi_stand" type="checkbox" value=""> Taksi</label>
+                      </div>
+                      <div class="checkbox">
+                        <label class="checkbox-inline searchable"><input class="check" name="car_rental" type="checkbox" value=""> Rent a car</label>
+                      </div>
+                      <div class="checkbox">
+                        <label class="checkbox-inline searchable"><input class="check" name="airport" type="checkbox" value=""> Aerodromi</label>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
                     <!-- kategorije accordion-->
                   </div>
                 </div>
@@ -347,7 +337,7 @@
                       <div class="card-body">
                         <h5 class="card-title">Tekst opisa</h5>
                         <div class="form-row mt-4">
-                          <textarea rows="10" class="multisteps-form__textarea form-control" placeholder="Ukratko opisite svoj objekat">
+                          <textarea rows="10" class="multisteps-form__textarea form-control" placeholder="Ukratko opišite svoj objekat">
                           </textarea>
                         </div>
                       </div>
@@ -397,7 +387,7 @@
                     <div class="form-row mt-4">
                       <div class="col-12 col-md-6 mt-4">
                               <div class="form-row mt-4">
-                              <textarea rows="10" class="multisteps-form__textarea form-control" placeholder="Ukratko opisite svoj objekat">
+                              <textarea rows="10" class="multisteps-form__textarea form-control">
                               </textarea>
                             </div>
                       </div>
@@ -460,7 +450,7 @@
             <!--Body-->
 
             <div class="modal-body mb-1">
-              <form action="" class="was-validated">
+              <form action="">
               <div class="form-group">
                 <label for="uname">Korisničko ime:</label>
                 <input type="text" class="form-control" id="uname" placeholder="Unesite username" name="uname" required>
@@ -503,7 +493,7 @@
             </div>
             <!--Body-->
             <div class="modal-body">
-              <form action="" class="was-validated">
+              <form action="">
                 <div class="form-group">
                   <label for="pwd">Ime i prezime:</label>
                   <input type="text" class="form-control" id="nameSurnameReg" placeholder="Unesite ime i prezime" name="nameSurnameReg" required>
@@ -574,7 +564,7 @@
                         </div>
                         <p>Unesite svoj email da bi resetovali svoju šifru.</p>
                           <div class="panel-body">
-                              <form action="" class="was-validated">
+                              <form action="">
                                 <fieldset>
                                   <div class="form-group">
                                     <input type="email" class="form-control" placeholder="Unesite email" name="emailRes" required>
@@ -665,5 +655,6 @@
     <script src="js/form.js"></script>
     <script src="js/objekat.js"></script>
     <script src="js/uploadImage.js"></script>
+    <script src="js/validateInput.js"></script>
   </body>
 </html>
