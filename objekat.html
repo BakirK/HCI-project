@@ -64,7 +64,12 @@
     </nav>
 
 
-
+<div class="container mt-2">
+  <div class="text-center">
+    <h3>Registracija objekta</h3>
+    <h5>Ukoliko želite da prikažete svoj objekat na mapi, prijavite se i unesite podatke ispod te ćemo vas kontaktirati o dodatnim informacijama i slikama putem email-a</h5>
+  </div>
+</div>
   <div class="formContainer mb-5">
     <div class="multisteps-form">
       <!--progress bar-->
@@ -74,7 +79,7 @@
             <button class="multisteps-form__progress-btn js-active" type="button" title="User Info">Osnovni podaci</button>
             <button class="multisteps-form__progress-btn" type="button" title="Address">Kategorije</button>
             <button class="multisteps-form__progress-btn" type="button" title="Order Info">Opis</button>
-            <button class="multisteps-form__progress-btn" type="button" title="Comments">Završetak        </button>
+            <button class="multisteps-form__progress-btn" type="button" title="Comments">Završetak</button>
           </div>
         </div>
       </div>
@@ -344,7 +349,7 @@
                   <div class="col-12 col-md-6 mt-4">
                     <div class="card shadow-sm">
                       <div class="card-body">
-                        <h5 class="card-title">Slike</h5>
+                        <h5 class="card-title">Slika</h5>
                         <div class="row py-4">
                           <div class="col-lg-6 mx-auto">
 
@@ -394,7 +399,9 @@
                     </div>
                     <div class="button-row d-flex mt-4">
                       <button class="btn btn-primary js-btn-prev" type="button" title="Prev">Nazad</button>
-                      <button class="btn btn-success ml-auto" type="button" title="Send">Send</button>
+                      <button class="btn btn-success ml-auto" type="button" title="Send" href="#loginToSaveModal" data-toggle="modal" data-target="#loginToSaveModal">
+                          Pošalji
+                      </button>
                     </div>
                   </div>
                 </div>
@@ -406,7 +413,35 @@
 
 
 
+<div class="modal fade" id="loginToSaveModal">
+    <div class="modal-dialog modal-dialog-centered">
+      <div class="modal-content">
+      
+        <!-- Modal Header --> 
+        <div class="modal-header">
+          <h4 class="modal-title text-center">Morate se prijaviti da bi sačuvali pretragu!</h4>
+          <button type="button" class="close" data-dismiss="modal">&times;</button>
+        </div>
+        
+        <!-- Modal body -->
+        <div class="modal-body">
+          <div class="options text-center">
+            <p>Nemate korisnički račun? </p>
+             <button type="button" class="btn btn-primary registerToSaveBtn">Registrujte se</button>
 
+            <p style="margin-top: 20px;">Već imate račun?</p>
+             <button type="button" class="btn btn-primary loginToSaveBtn">Prijavite se</button>
+          </div>
+        </div>
+        
+        <!-- Modal footer -->
+        <div class="modal-footer">
+          <button type="button" class="btn btn-second" data-dismiss="modal">Close</button>
+        </div>
+        
+      </div>
+    </div>
+</div>
 
 
 
@@ -594,9 +629,6 @@
 
 
 <div style="clear:both;"></div>
-
-
-
 <!-- Footer -->
   <section id="footer">
     
