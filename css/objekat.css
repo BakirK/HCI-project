@@ -141,5 +141,8 @@
         height: 130vh;
     }
 }
+*{
+  max-width: 100%;
+}
 
 
