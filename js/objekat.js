@@ -1,3 +1,13 @@
+$(".loginToSaveBtn").click(function(e){
+  $('#loginToSaveModal').modal('hide');
+  $("#prijava").click();
+});
+
+$(".registerToSaveBtn").click(function(e){
+  $('#loginToSaveModal').modal('hide');
+    $("#registracija").click();
+});
+
 //DOM elements
 const DOMstrings = {
   stepsBtnClass: 'multisteps-form__progress-btn',
