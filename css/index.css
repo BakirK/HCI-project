@@ -134,7 +134,7 @@
   width: 100%;
   object-fit: cover;
   object-position: 60% 10%;
-   filter: blur(1px);
+  filter: blur(0px);
 }
 
 .scaleImg1   {
@@ -152,5 +152,12 @@
     background-color: black;
     background-size: 75%, 75%;
     border-radius: 50%;
+}
+
+.picutreBlurr {
+
+  filter: blur(1px);
+  transform: scale(1.01); 
+
 }
 
