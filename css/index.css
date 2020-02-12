@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css?family=Baloo+Bhaijaan&display=swap');
+
 .arrowUp {
     position: absolute;
     left: 50%;
@@ -36,32 +38,112 @@
   background-image: linear-gradient(to bottom, rgba(0, 0, 0, 0.42), rgba(0, 0, 0, 0.42) calc(100% - 150px), rgba(0, 0, 0, 0.55) calc(100% - 60px), rgba(0, 0, 0, 0.67));
 }
 
-.centered {
+.centered { 
+  
   position: absolute;
-  top: 50%;
+  top: 30%;
   left: 50%;
   transform: translate(-50%, -50%);
+  
+}
+
+a:hover {
+  color: white;
+  text-decoration: none;
+  transition-duration: 0.3s;
+
+  transform: scale(1.1);
+}
+
+a:hover > i {
+  transition-duration: 0.4s;
+  transform: translate(25px) scale(1.15);
+}
+
+.firstpictureandtext {
+  display: grid;
+  grid-template-columns: 20% 80%;
+  grid-template-rows: auto;
+  padding: 20px;
+}
+
+
+.tekstvijecnica {
+  font-size: 20px ;
+  text-align: justify;
+  padding: 0px 0px 0px 20px;
+  grid-column: 2;
+  grid-row: 1;
+}
+
+.vijecnica {
+  width: 100%;
+  object-fit: cover;
+  grid-column: 1;
+  grid-row: 1;
+}
+
+.secondpictureandtext {
+  display: grid;
+  grid-template-columns: 80% 20%;
+  grid-template-rows: auto;
+  padding: 20px;
+}
+
+
+.textmost { 
+  font-size: 20px;
+  text-align: justify;
+  padding: 0px 20px 0px 0px;
+  grid-column: 1;
+  grid-row: 1;
+}
+
+.principovmost {
+  width: 100%;
+  object-fit: cover;
+  grid-column: 2;
+  grid-row: 1;
+}
+
+.centered > h2 {
+  text-shadow: 1px 1px 2px rgba(0, 0, 0, 1);
+  font-size: 50px;
+  text-transform: uppercase;
+  font-family: 'Baloo Bhaijaan', cursive;;
   color: white;
 }
 .startBtn {
   display: inline-block;
-  background-color: #ffffff;
+  /*background-color: #ffffff;*/
   text-transform: uppercase;
   letter-spacing: 0.1em;
   font-weight: 400;
-  color: #000000;
+  color:white ;
   padding: 0.7em 0.5em;
-  cursor: pointer
+  cursor: pointer;
   line-height: 1.42;
-  font-size: 1.5em;
+  font-size: 2.5em;
   text-decoration: none;
+  font-family: 'Baloo Bhaijaan', cursive;;
+  text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.8);
 }
 .scaleImg {
+  /*opacity: 0.6;*/
+  height: 100%;
+  width: 100%;
+  object-fit: cover;
+  object-position: 60% 10%;
+   filter: blur(1px);
+}
+
+.scaleImg1   {
   height: 100%;
   width: 100%;
   object-fit: cover;
   object-position: 60% 10%;
 }
+
 /*
 .carousel-control-prev-icon,
 .carousel-control-next-icon {
@@ -71,4 +153,9 @@
     background-color: #007b5e !important;
     background-size: 100%, 100%;
     border-radius: 50%;
-}/*
+}*/
+
+/*.pozadina {
+  background-color:rgba(0,0,0,1);
+
+}*/
