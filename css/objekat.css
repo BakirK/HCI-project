@@ -139,7 +139,7 @@
 
 @media only screen and (max-width: 768px) {
     .formContainer {
-        height: 110vh;
+        min-height: 250vh;
     }
 }
 *{
