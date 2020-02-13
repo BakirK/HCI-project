@@ -1,5 +1,4 @@
 var map, infoWindow, service;
-var refreshBtn;
 var hostnameRegexp = new RegExp('^https?://.+?/');
 var days = ["Ponedjeljak", "Utorak", "Srijeda", "Četvrtak", "Petak", "Subota", "Nedjelja"];
 var request, mapMoved = true;
@@ -35,10 +34,7 @@ function initMap() {
     }
 
   });
-  //check if map has moved since last refresh 
-  map.addListener('center_changed', function() {
-    refreshBtn.disabled = false;    
-  });
+
   service = new google.maps.places.PlacesService(map);
   infoWindow = new google.maps.InfoWindow({
     content: document.getElementById('info-content')
@@ -46,9 +42,7 @@ function initMap() {
 
 //autocomplete
   var card = document.getElementById('pac-card');
-  refreshBtn = document.getElementById('refreshBtn');
   map.controls[google.maps.ControlPosition.TOP_CENTER].push(card);
-  map.controls[google.maps.ControlPosition.RIGHT_CENTER].push(refreshBtn);
 
   var input = document.getElementById('pac-input');
   //bottom left corner (sw)
@@ -123,26 +117,6 @@ function initMap() {
     //infowindow.open(map, marker);
   });
 
-  $("#refreshBtn").click(function() {
-    var checkBoxes = $(".checkbox input[type=checkbox]:checked").get();
-    refreshBtn.disabled = true;
-    for (var i = checkBoxes.length - 1; i >= 0; i--) {
-      request = {
-        bounds:map.getBounds(),
-        types: [checkBoxes[i].name],
-        language : 'bs'
-      };
-      service.nearbySearch(request, function(results, status) {
-        if (status == google.maps.places.PlacesServiceStatus.OK) {
-          let type = results[0].types[0];
-          for (var i = 0; i < results.length; i++) {
-            createMarker(results[i], type);
-          }
-        }
-      });
-    }
-  });
-
 
   $(".checkbox :checkbox").change(function(event) {
     if (this.checked) {
@@ -170,6 +144,26 @@ function initMap() {
           markArr[i].setVisible(false);
         }
     }
+  });
+
+  //reload markers on map drag
+  map.addListener('center_changed', function() {
+    var checkBoxes = $(".checkbox input[type=checkbox]:checked").get();
+    for (var i = checkBoxes.length - 1; i >= 0; i--) {
+      request = {
+        bounds:map.getBounds(),
+        types: [checkBoxes[i].name],
+        language : 'bs'
+      };
+      service.nearbySearch(request, function(results, status) {
+        if (status == google.maps.places.PlacesServiceStatus.OK) {
+          let type = results[0].types[0];
+          for (var i = 0; i < results.length; i++) {
+            createMarker(results[i], type);
+          }
+        }
+      });
+    } 
   });
 
 
