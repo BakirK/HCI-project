@@ -448,7 +448,7 @@ section {
 }
 
 .pricing .box {
-  padding: 40px;
+  padding: 40px 40px 40px 40px;
   margin-bottom: 30px;
   box-shadow: 0px 0px 30px rgba(73, 78, 92, 0.15);
   background: #fff;
@@ -552,7 +552,7 @@ section {
 @media (max-width: 420px) {
   .pricing .box {
     max-width: 100%;
-    margin: 0 auto 30px auto;
+    margin: 0 auto 30px Authorto;
   }
 }
 
@@ -663,12 +663,18 @@ section {
   padding: 12px 15px;
 }
 
-.contact .php-email-form button[type="submit"] {
+.tealButton {
   background: #68A4C4;
   border: 0;
   padding: 10px 24px;
   color: #fff;
   transition: 0.4s;
+}
+.text-teal {
+  color: #68A4C4;
+}
+.text-grey {
+  color: #666;
 }
 
 .contact .php-email-form button[type="submit"]:hover {

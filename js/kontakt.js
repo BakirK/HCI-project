@@ -10,6 +10,7 @@ $("#sendMsg").click(function(e){
 	}
 });
 
-$('#contactForm').submit(function () {
- return false;
+$('#contactForm').submit(function (e) {
+	e.preventDefault();
 });
+

@@ -7,6 +7,13 @@
     <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i|Roboto:300,300i,400,400i,500,500i,700,700i&display=swap" rel="stylesheet">
     <link href="assets/vendor/icofont/icofont.min.css" rel="stylesheet">
     <link href="assets/css/backToTop.css" rel="stylesheet">
+    <link href="assets/vendor/animate.css/animate.min.css" rel="stylesheet">
+  <link href="assets/vendor/icofont/icofont.min.css" rel="stylesheet">
+  <link href="assets/vendor/boxicons/css/boxicons.min.css" rel="stylesheet">
+  <link href="assets/vendor/venobox/venobox.css" rel="stylesheet">
+  <link href="assets/vendor/owl.carousel/assets/owl.carousel.min.css" rel="stylesheet">
+  <link href="assets/vendor/aos/aos.css" rel="stylesheet">
+    <link href="assets/css/style.css" rel="stylesheet">
     <!-- Bootstrap CSS -->
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" crossorigin="anonymous">
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.0/css/all.css" integrity="sha384-lZN37f5QGtY3VHgisS14W3ExzMWZxybE1SJSEsQp9S+oqd12jhcu+A56Ebc1zFSJ" crossorigin="anonymous">
@@ -65,69 +72,107 @@
 
 
 
-<div class="container-fluid">
-  <div class="container my-5">
-    <div class="row justify-content-center">
-      <div class="col-sm-12 col-md-8 col-lg-6 pb-3">
-        <!--Form with header-->
-        <form>
-            <div class="card  rounded-0">
-                <div class="card-header p-0">
-                    <div class="bg-white text-dark text-center py-2">
-                        <h3><i class="fa fa-envelope"></i> Kontaktirajte nas</h3>
-                    </div>
-                </div>
-                <div class="card-body p-3">
-                  <div class="alert alert-success fade show" id="msgSent">
-                    <button type="button" class="close closeAlert">&times;</button>
-                    <strong>Uspješno</strong> poslan email!
-                  </div>
-                    <!--Body-->
-                    <div class="form-group">
-                        <div class="input-group mb-2">
-                            <div class="input-group-prepend">
-                                <div class="input-group-text"><i class="fas fa-heading text-warning"></i></div>
-                            </div>
-                            <input type="text" class="form-control msgInput" placeholder="Naslov poruke" required>
-                        </div>
-                    </div>
-                    <div class="form-group">
-                        <div class="input-group mb-2">
-                            <div class="input-group-prepend">
-                                <div class="input-group-text"><i class="fa fa-envelope text-warning"></i></div>
-                            </div>
-                            <input type="email" class="form-control msgInput" name="email" placeholder="Vaš email" required>
-                        </div>
-                    </div>
+    <section class="contact" data-aos="fade-up" data-aos-easing="ease-in-out" data-aos-duration="500">
+      <div class="container">
 
-                    <div class="form-group">
-                        <div class="input-group mb-2">
-                            <div class="input-group-prepend">
-                                <div class="input-group-text"><i class="fa fa-comment text-warning"></i></div>
-                            </div>
-                            <textarea class="form-control msgInput" placeholder="Poruka" required></textarea>
-                        </div>
-                    </div>
+        <div class="row">
 
-                    <div class="text-center">
-                        <button type="submit" class="btn btn-success btn-block rounded-0 py-2" id="sendMsg" style="background-color: #007b5e">Pošalji
-                        </button> 
-                    </div>
+          <div class="col-lg-6">
+
+            <div class="row">
+              <div class="col-md-12">
+                <div class="info-box">
+                  <i class="bx bx-map"></i>
+                  <h3>Our Address</h3>
+                  <p>A108 Adam Street, New York, NY 535022</p>
                 </div>
+              </div>
+              <div class="col-md-6">
+                <div class="info-box">
+                  <i class="bx bx-envelope"></i>
+                  <h3>Email Us</h3>
+                  <p>info@example.com<br>contact@example.com</p>
+                </div>
+              </div>
+              <div class="col-md-6">
+                <div class="info-box">
+                  <i class="bx bx-phone-call"></i>
+                  <h3>Call Us</h3>
+                  <p>+1 5589 55488 55<br>+1 6678 254445 41</p>
+                </div>
+              </div>
             </div>
-        </form>
-        <!--Form with header-->
+
+          </div>
+
+          <div class="col-lg-6">
+            <!--Form with header-->
+          <form id="contactForm">
+              <div class="card  rounded-0">
+                  <div class="card-header p-0">
+                      <div class="bg-white text-grey text-center py-2">
+                          <h3><i class="fa fa-envelope"></i> Kontaktirajte nas</h3>
+                      </div>
+                  </div>
+                  <div class="card-body p-3">
+                    <div class="alert alert-success fade show" id="msgSent">
+                      <button type="button" class="close closeAlert">&times;</button>
+                      <strong>Uspješno</strong> poslan email!
+                    </div>
+                      <!--Body-->
+                      <div class="form-group">
+                          <div class="input-group mb-2">
+                              <div class="input-group-prepend">
+                                  <div class="input-group-text"><i class="fas fa-heading text-teal"></i></div>
+                              </div>
+                              <input type="text" class="form-control msgInput" placeholder="Naslov poruke" required>
+                          </div>
+                      </div>
+                      <div class="form-group">
+                          <div class="input-group mb-2">
+                              <div class="input-group-prepend">
+                                  <div class="input-group-text"><i class="fa fa-envelope text-teal"></i></div>
+                              </div>
+                              <input type="email" class="form-control msgInput" name="email" placeholder="Vaš email" required>
+                          </div>
+                      </div>
+
+                      <div class="form-group">
+                          <div class="input-group mb-2">
+                              <div class="input-group-prepend">
+                                  <div class="input-group-text"><i class="fa fa-comment text-teal"></i></div>
+                              </div>
+                              <textarea class="form-control msgInput" placeholder="Poruka" required></textarea>
+                          </div>
+                      </div>
+
+                      <div class="text-center">
+                          <button class="tealButton" id="sendMsg">Pošalji
+                          </button> 
+                      </div>
+                  </div>
+              </div>
+          </form>
+          <!--Form with header-->
+          </div>
+
+        </div>
+
+      </div>
+    </section>
+    <!-- End Contact Section -->
+
+
+
+
+  <div class="container-fluid">
+    <div class="row">
+      <div class="col-12 pb-1 px-0" >
+          <h1>Posjetite nas</h1>
+          <iframe  src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d5753.9515215773!2d18.39518857684326!3d43.85633107247359!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x5cbfa583cac7da02!2sFaculty%20of%20Electrical%20Engineering!5e0!3m2!1sen!2sba!4v1578865260066!5m2!1sen!2sba" width="600" height="450" frameborder="0" style="border:0; width: 100%;" allowfullscreen=""></iframe>
       </div>
     </div>
   </div>
-
-  <div class="row">
-    <div class="col-12 pb-1 px-0" >
-        <h1>Posjetite nas</h1>
-        <iframe  src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d5753.9515215773!2d18.39518857684326!3d43.85633107247359!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x5cbfa583cac7da02!2sFaculty%20of%20Electrical%20Engineering!5e0!3m2!1sen!2sba!4v1578865260066!5m2!1sen!2sba" width="600" height="450" frameborder="0" style="border:0; width: 100%;" allowfullscreen=""></iframe>
-    </div>
-  </div>
-</div>
 
 
 
@@ -394,6 +439,14 @@
     <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
     <script src="assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
     <script src="assets/vendor/jquery.easing/jquery.easing.min.js"></script>
+    <script src="assets/vendor/jquery.easing/jquery.easing.min.js"></script>
+    <script src="assets/vendor/venobox/venobox.min.js"></script>
+    <script src="assets/vendor/waypoints/jquery.waypoints.min.js"></script>
+    <script src="assets/vendor/counterup/counterup.min.js"></script>
+    <script src="assets/vendor/owl.carousel/owl.carousel.min.js"></script>
+    <script src="assets/vendor/isotope-layout/isotope.pkgd.min.js"></script>
+    <script src="assets/vendor/aos/aos.js"></script>
+    <script src="assets/js/main.js"></script>
     <script src="js/form.js"></script>
     <script src="js/validateInput.js"></script>
     <script src="js/kontakt.js"></script>
