@@ -5,20 +5,34 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i|Roboto:300,300i,400,400i,500,500i,700,700i&display=swap" rel="stylesheet">
+
+    <!-- Vendor CSS Files -->
+    <link href="assets/vendor/animate.css/animate.min.css" rel="stylesheet">
+    <link href="assets/vendor/icofont/icofont.min.css" rel="stylesheet">
+    <link href="assets/vendor/boxicons/css/boxicons.min.css" rel="stylesheet">
+    <link href="assets/vendor/venobox/venobox.css" rel="stylesheet">
+    <link href="assets/vendor/aos/aos.css" rel="stylesheet">
+
+    <!-- Template Main CSS File -->
+    <link href="assets/css/style.css" rel="stylesheet">
+    <link href="assets/css/backToTop.css" rel="stylesheet">
+
     <!-- Bootstrap CSS -->
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" crossorigin="anonymous">
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.0/css/all.css" integrity="sha384-lZN37f5QGtY3VHgisS14W3ExzMWZxybE1SJSEsQp9S+oqd12jhcu+A56Ebc1zFSJ" crossorigin="anonymous">
     <link rel="stylesheet" href="css/footer.css">
     <link rel="stylesheet" href="css/index.css">
+    
+
+
+
+
+
     <title>Vodič kroz grad</title>
   </head>
   <body>
-    <div class="container-fluid text-center jumbotron mb-0 px-0 py-1">
-    	<h1>Dobrodošli u vodič kroz grad</h1>
-  		<h5>Tu smo da vam pomognemo pri snalaženju u gradu</h5>
-    </div>
-
-    <nav class="navbar navbar-expand-md navbar-dark bg-teal-tranparent sticky-top" id="navbar">
+    <nav class="navbar navbar-expand-md navbar-dark fixed-top bg-teal-transparent" id="header">
       <!-- Brand -->
       <a class="navbar-brand" href="#top">Vodič kroz grad</a>
 
@@ -68,7 +82,48 @@
     </nav>
 
 
+    <section id="hero" class="d-flex justify-cntent-center align-items-center">
+    <div id="heroCarousel" class="container carousel carousel-fade" data-ride="carousel">
 
+      <!-- Slide 1 -->
+      <div class="carousel-item active">
+        <div class="carousel-container">
+          <h2 class="animated fadeInDown">Dobrodošli na <span>Vodič kroz grad</span></h2>
+          <p class="animated fadeInUp">Ova stranica vam mogućava da pretražite sve vrste objekata i usluga kao i ulice te mjesta u vašoj okolini.</p>
+          <a href="pretraga.html" class="btn-get-started animated fadeInUp">Započni pretragu</a>
+        </div>
+      </div>
+
+      <!-- Slide 2 -->
+      <div class="carousel-item">
+        <div class="carousel-container">
+          <h2 class="animated fadeInDown">Registracija objekta</h2>
+          <p class="animated fadeInUp">Mi vam omogućavamo da prikažete svoj objekat na mapi te ga na taj način promivišete zajedno sa uslugama koje nudite.</p>
+          <a href="objekat.html" class="btn-get-started animated fadeInUp">Registruj objekat</a>
+        </div>
+      </div>
+
+      <!-- Slide 3 -->
+      <div class="carousel-item">
+        <div class="carousel-container">
+          <h2 class="animated fadeInDown">Kontakt</h2>
+          <p class="animated fadeInUp">Za sva pitanja i nejasnoće kao i molbe možete nas kontaktirati.</p>
+          <a href="kontakt.html" class="btn-get-started animated fadeInUp">Kotnaktirajte nas</a>
+        </div>
+      </div>
+
+      <a class="carousel-control-prev" href="#heroCarousel" role="button" data-slide="prev">
+        <span class="carousel-control-prev-icon bx bx-chevron-left" aria-hidden="true"></span>
+        <span class="sr-only">Previous</span>
+      </a>
+
+      <a class="carousel-control-next" href="#heroCarousel" role="button" data-slide="next">
+        <span class="carousel-control-next-icon bx bx-chevron-right" aria-hidden="true"></span>
+        <span class="sr-only">Next</span>
+      </a>
+
+    </div>
+  </section>
 
 
 
@@ -135,12 +190,173 @@
     </div>
   </div>
 
+
+<!-- cards--> 
+<section class="services">
+      <div class="container">
+
+        <div class="row">
+          <div class="col-md-6 col-lg-3 d-flex align-items-stretch aos-init aos-animate" data-aos="fade-up">
+            <div class="icon-box icon-box-pink">
+              <div class="icon"><i class="bx bxl-dribbble"></i></div>
+              <h4 class="title"><a href="">Lorem Ipsum</a></h4>
+              <p class="description">Voluptatum deleniti atque corrupti quos dolores et quas molestias excepturi sint occaecati cupiditate non provident</p>
+            </div>
+          </div>
+
+          <div class="col-md-6 col-lg-3 d-flex align-items-stretch aos-init aos-animate" data-aos="fade-up" data-aos-delay="100">
+            <div class="icon-box icon-box-cyan">
+              <div class="icon"><i class="bx bx-file"></i></div>
+              <h4 class="title"><a href="">Sed ut perspiciatis</a></h4>
+              <p class="description">Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur</p>
+            </div>
+          </div>
+
+          <div class="col-md-6 col-lg-3 d-flex align-items-stretch aos-init aos-animate" data-aos="fade-up" data-aos-delay="200">
+            <div class="icon-box icon-box-green">
+              <div class="icon"><i class="bx bx-tachometer"></i></div>
+              <h4 class="title"><a href="">Magni Dolores</a></h4>
+              <p class="description">Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum</p>
+            </div>
+          </div>
+
+          <div class="col-md-6 col-lg-3 d-flex align-items-stretch aos-init aos-animate" data-aos="fade-up" data-aos-delay="200">
+            <div class="icon-box icon-box-blue">
+              <div class="icon"><i class="bx bx-world"></i></div>
+              <h4 class="title"><a href="">Nemo Enim</a></h4>
+              <p class="description">At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis praesentium voluptatum deleniti atque</p>
+            </div>
+          </div>
+
+        </div>
+
+      </div>
+    </section>
+ <!--cards end--> 
+
+
+    <section class="service-details">
+      <div class="container">
+
+        <div class="row">
+          <div class="col-md-6 d-flex align-items-stretch aos-init aos-animate" data-aos="fade-up">
+            <div class="card">
+              <div class="card-img">
+                <img src="assets/img/service-details-1.jpg" alt="...">
+              </div>
+              <div class="card-body">
+                <h5 class="card-title"><a href="#">Our Mission</a></h5>
+                <p class="card-text">Lorem ipsum dolor sit amet, consectetur elit, sed do eiusmod tempor ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat</p>
+                <div class="read-more"><a href="#"><i class="icofont-arrow-right"></i> Read More</a></div>
+              </div>
+            </div>
+          </div>
+          <div class="col-md-6 d-flex align-items-stretch aos-init aos-animate" data-aos="fade-up">
+            <div class="card">
+              <div class="card-img">
+                <img src="assets/img/service-details-2.jpg" alt="...">
+              </div>
+              <div class="card-body">
+                <h5 class="card-title"><a href="#">Our Plan</a></h5>
+                <p class="card-text">Sed ut perspiciatis unde omnis iste natus error sit voluptatem doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo</p>
+                <div class="read-more"><a href="#"><i class="icofont-arrow-right"></i> Read More</a></div>
+              </div>
+            </div>
+
+          </div>
+          <div class="col-md-6 d-flex align-items-stretch aos-init aos-animate" data-aos="fade-up">
+            <div class="card">
+              <div class="card-img">
+                <img src="assets/img/service-details-3.jpg" alt="...">
+              </div>
+              <div class="card-body">
+                <h5 class="card-title"><a href="#">Our Vision</a></h5>
+                <p class="card-text">Nemo enim ipsam voluptatem quia voluptas sit aut odit aut fugit, sed quia magni dolores eos qui ratione voluptatem sequi nesciunt Neque porro quisquam est, qui dolorem ipsum quia dolor sit amet</p>
+                <div class="read-more"><a href="#"><i class="icofont-arrow-right"></i> Read More</a></div>
+              </div>
+            </div>
+          </div>
+          <div class="col-md-6 d-flex align-items-stretch aos-init aos-animate" data-aos="fade-up">
+            <div class="card">
+              <div class="card-img">
+                <img src="assets/img/service-details-4.jpg" alt="...">
+              </div>
+              <div class="card-body">
+                <h5 class="card-title"><a href="#">Our Care</a></h5>
+                <p class="card-text">Nostrum eum sed et autem dolorum perspiciatis. Magni porro quisquam laudantium voluptatem. In molestiae earum ab sit esse voluptatem. Eos ipsam cumque ipsum officiis qui nihil aut incidunt aut</p>
+                <div class="read-more"><a href="#"><i class="icofont-arrow-right"></i> Read More</a></div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+
+    <section class="pricing section-bg aos-init aos-animate" data-aos="fade-up">
+      <div class="container">
+
+        <div class="section-title">
+          <h2>Pricing</h2>
+          <p>Magnam dolores commodi suscipit. Necessitatibus eius consequatur ex aliquid fuga eum quidem. Sit sint consectetur velit. Quisquam quos quisquam cupiditate. Et nemo qui impedit suscipit alias ea. Quia fugiat sit in iste officiis commodi quidem hic quas.</p>
+        </div>
+
+        <div class="row no-gutters">
+
+          <div class="col-lg-4 box">
+            <h3>Free</h3>
+            <h4>$0<span>per month</span></h4>
+            <ul>
+              <li><i class="bx bx-check"></i> Quam adipiscing vitae proin</li>
+              <li><i class="bx bx-check"></i> Nec feugiat nisl pretium</li>
+              <li><i class="bx bx-check"></i> Nulla at volutpat diam uteera</li>
+              <li class="na"><i class="bx bx-x"></i> <span>Pharetra massa massa ultricies</span></li>
+              <li class="na"><i class="bx bx-x"></i> <span>Massa ultricies mi quis hendrerit</span></li>
+            </ul>
+            <a href="#" class="get-started-btn">Get Started</a>
+          </div>
+
+          <div class="col-lg-4 box featured">
+            <h3>Business</h3>
+            <h4>$29<span>per month</span></h4>
+            <ul>
+              <li><i class="bx bx-check"></i> Quam adipiscing vitae proin</li>
+              <li><i class="bx bx-check"></i> Nec feugiat nisl pretium</li>
+              <li><i class="bx bx-check"></i> Nulla at volutpat diam uteera</li>
+              <li><i class="bx bx-check"></i> Pharetra massa massa ultricies</li>
+              <li><i class="bx bx-check"></i> Massa ultricies mi quis hendrerit</li>
+            </ul>
+            <a href="#" class="get-started-btn">Get Started</a>
+          </div>
+
+          <div class="col-lg-4 box">
+            <h3>Developer</h3>
+            <h4>$49<span>per month</span></h4>
+            <ul>
+              <li><i class="bx bx-check"></i> Quam adipiscing vitae proin</li>
+              <li><i class="bx bx-check"></i> Nec feugiat nisl pretium</li>
+              <li><i class="bx bx-check"></i> Nulla at volutpat diam uteera</li>
+              <li><i class="bx bx-check"></i> Pharetra massa massa ultricies</li>
+              <li><i class="bx bx-check"></i> Massa ultricies mi quis hendrerit</li>
+            </ul>
+            <a href="#" class="get-started-btn">Get Started</a>
+          </div>
+
+        </div>
+
+      </div>
+    </section>
+
+
+
+
     <div class="container-fluid my-5">
       <div class="row my-5 ">
-        <div class="col-lg-4 col-md-12 order-lg-1 order-md-2">
+        <div class="col-lg-4 col-md-12 order-lg-1 order-md-2 order-sm-2">
           <img src="img/vijecnica.jpg" alt="Error loading picture" class="contentImage">
         </div>
-        <div class="col-lg-8 col-md-12 order-lg-2 order-md-1">
+        <div class="col-lg-8 col-md-12 order-lg-2 order-md-1 order-sm-1">
           <h2>Vijećnica</h2> <br>
           <p class="text">Sarajevska vijećnica je zgrada u Sarajevu nedaleko od Baščaršije na Mustaj-pašinom mejdanu i predstavlja jedan od najljepših i najreprezentativnijih objekata iz austrougarskog perioda građen u pseudo-maurskom stilu. U ovom stilu rađena je većina objekata što ih je u Sarajevu ostavila austrougarska vlast, a sinonim je za austrougarski period u Bosni i Hercegovini i zaštitni znak tog vremena. Prvi projekat je uradio Karlo Paržik, a kako se ovaj nije svidio ministru Benjaminu Kalaju, izrada novog je povjerena Alexandru Witteku. Kao uzor u izradi ovog projekta poslužila mu je džamija Kemala II zbog čega je dva puta odlazio u Kairo. Kako je Witek navodno, upravo zbog ovog projekta (nedovoljnog osvjetljenja u glavnoj auli zgrade), umno obolio i izvršio samoubistvo, završetak njegovog projekta je povjeren 1894. godine Ćirilu M. Ivekoviću. Uporedo sa izradom i razradom projekta tekla je i izgradnja objekta od 1892. do 1894. godine. Objekat gradske vijećnice zvanično je predat na upotrebu 1896. godine. Nakon što je obnovljena, Vijećnica je ponovo otvorena 9. maja 2014. godine. 
           </p>
@@ -161,19 +377,21 @@
       </div>  
 
       <div class="row my-5 py-5">
-        <div class="col-lg-4 col-md-12  order-lg-1 order-md-2">
+        <div class="col-lg-4 col-md-12 order-lg-1 order-md-2 order-sm-2">
           <img src="img/sahatkula.jpg" alt="Error loading picture" class="contentImage">
         </div>
-        <div class="col-lg-8 col-md-12  order-lg-2 order-md-1 ">
+        <div class="col-lg-8 col-md-12 order-lg-2 order-md-1 order-sm-1">
           <h2>Sahat-kula</h2> <br>
           <p class="text">
             Sahat-kula je kula karakteristična za bosanske čaršije ali i za druga mjesta koja su bila pod vlašću ili uticajem Osmanlijske imperije. Naime sahat-kule su građene isključivo u evropskom dijelu Osmanskog carstva, naročito u Bosni i Hercegovini što je bila islamska varijacija na zapadnoevropsku formu zvonika te je sahat-kula simbolična graditeljska osobina Bosne i Hercegovine. Sahat-kule su građene uglavnom sa velikim satom na jednom ili više lica objekta (obično na četiri lica) kako bi veći broj stanovnika određenog mjesta mogao čitati vrijeme. Sahat-kula je arhaični izraz u bosanskom jeziku i odnosni se na specifične građevine izgrađene pretežno na području Bosne i Hercegovine. Prema jednom putopiscu iz Francuske iz 16. vijeka , prva sahat-kula podignuta je u Skoplju između 1566. i 1572. godine. Sahat-kule su najčešće građene u centralnim zonama čaršije, i to uz džamije, kao zadužbine pojedinih vakifa, mada ih ima i na drugim mjestima, poput sahat-kule u Maglaju koja je podignuta u oboru maglajske utvrde, ili onih u Tešnju, Gradačcu ili Počitelju. 
           </p>
         </div>
       </div>
-
-
     </div>
+
+
+
+
 
 
 
@@ -393,58 +611,77 @@
         </div>
       </div>
     </div>
-    <hr>
-    <div class="container pt-3" id="footer-content">
-      <div class="row text-center text-xs-center text-sm-left text-md-left">
-        <div class="col-xs-12 col-sm-4 col-md-4">
-          <h5>Kontakt</h5>
-          <ul class="list-unstyled quick-links">
-            <li><a><i class="fas fa-phone"></i> Telefon: +387 62/123-656</a></li>
-            <li><a><i class="fas fa-home"></i> Adresa: Zmaja od Bosne bb</a></li>
-            <li><a><i class="fa fa-envelope  "></i> Email: vodic_kroz_grad@info.ba</a></li>
-          </ul>
-        </div>
-        <div class="col-xs-12 col-sm-4 col-md-4">
-          <h5>Radno vrijeme</h5>
-          <ul class="list-unstyled quick-links">
-            <li><a><i class="fas fa-clock"></i> Pon-pet: 09h-17h</a></li>
-            <li><a><i class="fas fa-clock"></i> Sub: 10h-13h</a></li>
-            <li><a><i class="fas fa-clock"></i> Nedjeljom ne radimo!</a></li>
-            <li><a><i class="fas fa-clock"></i> Pauza radnim danom: 11:30h-12:00h</a></li>
-          </ul>
-        </div>
-      </div>
 
-      <div class="row">
-        <div class="col-xs-12 col-sm-12 col-md-12 mt-2 mt-sm-5">
-          <ul class="list-unstyled list-inline social text-center">
-            <li class="list-inline-item"><a href="#"><i class="fab fa-facebook"></i></a></li>
-            <li class="list-inline-item"><a href="#"><i class="fab fa-twitter"></i></a></li>
-            <li class="list-inline-item"><a href="#"><i class="fab fa-instagram"></i></a></li>
-            <li class="list-inline-item"><a href="#" target="_blank"><i class="fa fa-envelope"></i></a></li>
-          </ul>
-        </div>
-        </hr>
-      </div>  
-      <div class="row">
-        <div class="col-xs-12 col-sm-12 col-md-12 mt-2 mt-sm-2 text-center text-white">
-          <p class="h6">&copy All right Reversed.<a class="text-green ml-2" href="#" target="_blank">Vodič kroz grad</a></p>
-        </div>
-        </hr>
-      </div>  
+    <div class="hr">
     </div>
+    <div  id="footer-content">
+
+      <div class="container pt-3">
+        <div class="row text-center text-xs-center text-sm-left text-md-left">
+          <div class="col-xs-12 col-sm-4 col-md-4">
+            <h5>Kontakt</h5>
+            <ul class="list-unstyled quick-links">
+              <li><a><i class="fas fa-phone"></i> Telefon: +387 62/123-656</a></li>
+              <li><a><i class="fas fa-home"></i> Adresa: Zmaja od Bosne bb</a></li>
+              <li><a><i class="fa fa-envelope  "></i> Email: vodic_kroz_grad@info.ba</a></li>
+            </ul>
+          </div>
+          <div class="col-xs-12 col-sm-4 col-md-4">
+            <h5>Radno vrijeme</h5>
+            <ul class="list-unstyled quick-links">
+              <li><a><i class="fas fa-clock"></i> Pon-pet: 09h-17h</a></li>
+              <li><a><i class="fas fa-clock"></i> Sub: 10h-13h</a></li>
+              <li><a><i class="fas fa-clock"></i> Nedjeljom ne radimo!</a></li>
+              <li><a><i class="fas fa-clock"></i> Pauza radnim danom: 11:30h-12:00h</a></li>
+            </ul>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-xs-12 col-sm-12 col-md-12 mt-2 mt-sm-5">
+            <ul class="list-unstyled list-inline social text-center">
+              <li class="list-inline-item"><a href="#"><i class="fab fa-facebook"></i></a></li>
+              <li class="list-inline-item"><a href="#"><i class="fab fa-twitter"></i></a></li>
+              <li class="list-inline-item"><a href="#"><i class="fab fa-instagram"></i></a></li>
+              <li class="list-inline-item"><a href="#" target="_blank"><i class="fa fa-envelope"></i></a></li>
+            </ul>
+          </div>
+          </hr>
+        </div>  
+      </div>
+    </div>
+    <div class="hr">
+      </div>
+    <div class="container">
+      <div class="copyright">
+        © Copyright <strong><span>Vodič kroz grad</span></strong>. All Rights Reserved
+      </div>
+      <div class="credits">
+        Dizajnirano od <a href="http://www.etf.unsa.ba/">Elektrotehničkog fakulteta</a>
+      </div>
+    </div>
+
   </section>
   <!-- Footer -->
 
+  <a href="#" class="back-to-top"><i class="icofont-simple-up"></i></a>
 
 
-    <!-- Optional JavaScript -->
     <!-- jQuery first, then Popper.js, then Bootstrap JS -->
-    <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" crossorigin="anonymous"></script>
+    <script src="assets/vendor/jquery/jquery.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
-    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" crossorigin="anonymous"></script>
+    <script src="assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+    <script src="assets/vendor/jquery.easing/jquery.easing.min.js"></script>
+    <script src="assets/vendor/jquery.easing/jquery.easing.min.js"></script>
+    <script src="assets/vendor/venobox/venobox.min.js"></script>
+    <script src="assets/vendor/waypoints/jquery.waypoints.min.js"></script>
+    <script src="assets/vendor/counterup/counterup.min.js"></script>
+    <script src="assets/vendor/owl.carousel/owl.carousel.min.js"></script>
+    <script src="assets/vendor/isotope-layout/isotope.pkgd.min.js"></script>
+    <script src="assets/vendor/aos/aos.js"></script>
+    <script src="assets/js/main.js"></script>
+    <script src="assets/js/backToTop.js"></script>
     <script src="js/form.js"></script>
-    <!--<script src="js/navbar.js"></script>-->
     <script src="js/validateInput.js"></script>
+    
   </body>
 </html>

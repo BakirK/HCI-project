@@ -2,13 +2,13 @@ $(document).ready(function(){
           
 	$(window).scroll(function() {
     if ($(this).scrollTop() > 100) {
-      $('#navbar').addClass('header-scrolled');
+      $('#header').addClass('header-scrolled');
     } else {
-      $('#navbar').removeClass('header-scrolled');
+      $('#header').removeClass('header-scrolled');
     }
   });
 
   if ($(window).scrollTop() > 100) {
-    $('#navbar').addClass('navbar-scrolled');
+    $('#header').addClass('header-scrolled');
   }
 });
