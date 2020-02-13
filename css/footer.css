@@ -12,7 +12,10 @@ section .section-title {
     text-transform: uppercase;
 }
 #footer {
-    background: #007b5e !important;
+    background: #0d2735 !important;
+}
+hr {
+    border: 1px solid #17455e;
 }
 #footer h5{
     padding-left: 10px;
@@ -67,6 +70,47 @@ section .section-title {
 .content-wrapper {
     height: 91vh;
 }
+.bg-teal-tranparent {
+    background-color: rgba(30, 67, 86, 0.8);
+}
+
+
+#footer .footer-newsletter {
+    padding: 20px 0;
+    background: #0d2735;
+}
+
+#footer .footer-newsletter form input[type="button"] {
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    border: 0;
+    background: none;
+    font-size: 16px;
+    padding: 0 20px;
+    margin: 3px;
+    background: #68A4C4;
+    color: #fff;
+    transition: 0.3s;
+    border-radius: 50px;
+}
+
+#footer .footer-newsletter form input[type="email"] {
+    border: 0;
+    padding: 4px;
+    width: calc(100% - 100px);
+}
+
+#footer .footer-newsletter form {
+    margin-top: 30px;
+    background: #fff;
+    padding: 6px 10px;
+    position: relative;
+    border-radius: 50px;
+}
+
+
 @media (max-width:767px){
     #footer h5 {
         padding-left: 0;
