@@ -159,6 +159,7 @@ function initMap() {
         if (status == google.maps.places.PlacesServiceStatus.OK) {
           //let type = results[0].types[0];
           let type = checkBoxes[i].name;
+          console.log(type);
           for (var i = 0; i < results.length; i++) {
             createMarker(results[i], type);
           }
