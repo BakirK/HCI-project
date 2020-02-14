@@ -121,6 +121,10 @@ function initMap() {
   $(".checkbox :checkbox").change(function(event) {
     if (this.checked) {
         // the checkbox is now checked 
+        let markArr = markers[this.name];
+        for (var i = markArr.length - 1; i >= 0; i--) {
+          markArr[i].setVisible(true);
+        }
         if(!loaded[this.name]) {
           request = {
             //location: center,
@@ -171,9 +175,9 @@ function initMap() {
             }
           }
           //let type = request.cheboxTypes[0];
-          console.log(type);
+          //console.log(type);
           if(!type) {
-            debugger;
+            //debugger;
           } else {
             for (var i = 0; i < results.length; i++) {
               createMarker(results[i], type);
@@ -199,6 +203,7 @@ function initMap() {
 
 
 function buildIWContent(place) {
+  console.log(place);
   document.getElementById('iw-icon').innerHTML = '<img class="hotelIcon" ' +
       'src="' + place.icon + '"/>';
   document.getElementById('iw-url').innerHTML = '<b><a href="' + place.url +
@@ -275,10 +280,14 @@ function buildIWContent(place) {
     document.getElementById('iw-price-row').style.display = 'none';
   }
   if(place.opening_hours) {
+    
     var date = new Date();
     var opening_hours = place.opening_hours
     var open;
     var dan = opening_hours.periods[date.getDay()];
+    if(!dan) {
+      dan = opening_hours.periods[0];
+    }
     let always = false;
     if(place.permanently_closed) {
       open = "Zatvoreno do daljnjeg";
@@ -361,7 +370,7 @@ function createMarker(place, type) {
   marker.placeResult = place; 
   google.maps.event.addListener(marker, 'click', showInfoWindow);
   markers[type].push(marker);
-  console.log(place);
+  //console.log(place);
 }
 
 function callback(results, status) {
@@ -378,7 +387,7 @@ function callback(results, status) {
       }
     }
     if(!type) {
-      debugger;
+      //debugger;
     } else {
       for (var i = 0; i < results.length; i++) {
         var place = results[i];
