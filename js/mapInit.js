@@ -157,7 +157,8 @@ function initMap() {
       };
       service.nearbySearch(request, function(results, status) {
         if (status == google.maps.places.PlacesServiceStatus.OK) {
-          let type = results[0].types[0];
+          //let type = results[0].types[0];
+          let type = checkBoxes[i].name;
           for (var i = 0; i < results.length; i++) {
             createMarker(results[i], type);
           }
