@@ -1,5 +1,4 @@
 @import url('https://fonts.googleapis.com/css?family=Baloo+Bhaijaan&display=swap');
-
 .arrowUp {
     position: absolute;
     left: 50%;
@@ -39,7 +38,6 @@
 }
 
 .centered { 
-  
   position: absolute;
   top: 35%;
   left: 50%;
