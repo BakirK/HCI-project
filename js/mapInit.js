@@ -129,6 +129,7 @@ function initMap() {
             types: [this.name],
             language : 'bs'
           };
+          whatMarker[this.name] = true;
           service.nearbySearch(request, callback);
           loaded[this.name] = true;
         } else {
@@ -150,18 +151,36 @@ function initMap() {
   map.addListener('center_changed', function() {
     var checkBoxes = $(".checkbox input[type=checkbox]:checked").get();
     for (var i = checkBoxes.length - 1; i >= 0; i--) {
+      whatMarker[checkBoxes[i].name] = true;
+      loaded[checkBoxes[i].name] = false;
       request = {
         bounds:map.getBounds(),
         types: [checkBoxes[i].name],
-        language : 'bs'
+        language : 'bs',
       };
       service.nearbySearch(request, function(results, status) {
         if (status == google.maps.places.PlacesServiceStatus.OK) {
-          let type = results[0].types[0];
-          console.log(type);
-          for (var i = 0; i < results.length; i++) {
-            createMarker(results[i], type);
+          //let type = results[0].types[0];
+          let type;
+          outer: for (var i = results.length - 1; i >= 0; i--) {
+            for (var j = results[i].types.length - 1; j >= 0; j--) {
+              if(whatMarker[results[i].types[j]]) {
+                type = results[i].types[j];
+                break outer;
+              }``
+            }
           }
+          //let type = request.cheboxTypes[0];
+          console.log(type);
+          if(!type) {
+            debugger;
+          } else {
+            for (var i = 0; i < results.length; i++) {
+              createMarker(results[i], type);
+            }
+            whatMarker[type] = false;
+          }
+          
         }
       });
     } 
@@ -347,11 +366,27 @@ function createMarker(place, type) {
 
 function callback(results, status) {
   if (status == google.maps.places.PlacesServiceStatus.OK) {
-    let type = results[0].types[0];
-    for (var i = 0; i < results.length; i++) {
-      var place = results[i];
-      createMarker(place, type);
+    //let type = results[0].types[0];
+    let type;
+    outer: for (var i = results.length - 1; i >= 0; i--) {
+      for (var j = results[i].types.length - 1; j >= 0; j--) {
+        if(whatMarker[results[i].types[j]]) {
+          type = results[i].types[j];
+          
+          break outer;
+        }
+      }
     }
+    if(!type) {
+      debugger;
+    } else {
+      for (var i = 0; i < results.length; i++) {
+        var place = results[i];
+        createMarker(place, type);
+      }
+      whatMarker[type] = false;
+    }
+    
   }
 }
 

@@ -174,3 +174,34 @@ var loaded = {
   bus_station : false,
   light_rail_station : false
 }
+
+var whatMarker = {
+  parking : false,
+  travel_agency : false,
+  library : false,
+  car_wash : false, 
+  gas_station : false,
+  grocery_or_supermarket : false, 
+  home_goods_store : false,
+  lodging : false,
+  jewelry_store : false,
+  liquor_store : false,
+  shopping_mall : false,
+  restaurant : false,
+  bar : false,
+  cafe : false,
+  bakery : false,
+  night_club : false,
+  bank : false,
+  atm : false,
+  embassy : false,
+  gym : false,
+  laundry : false,
+  zoo : false,
+  museum : false,
+  airport : false,
+  taxi_stand : false,
+  car_rental : false,
+  bus_station : false,
+  light_rail_station : false
+}
