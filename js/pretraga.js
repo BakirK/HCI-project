@@ -7,6 +7,36 @@ $(".registerToSaveBtn").click(function(e){
 	$('#loginToSaveModal').modal('hide');
     $("#registracija").click();
 });
+
+$(".checkbox :checkbox").change(function (event) {
+  if($("#parameters :checkbox").length == 0) {
+    $("#none").css('display', 'none');
+  } else {
+    $("#none").css('display', '');
+  }
+  if (this.checked) {
+      // the checkbox is now checked 
+      $(".parameters").append($(this).parent().parent().clone().addClass('addedCheckBox col-lg-6 col-sm-12'));
+  } else {
+    // the checkbox is now no longer checked
+    $(".addedCheckBox :checkbox[name='" + this.name + "']").parent().parent().remove();
+  }
+});
+
+
+$("#parameters").on('change', ':checkbox', function (event) {
+  if($("#parameters :checkbox").length == 0) {
+    $("#none").css('display', 'none');
+  } else {
+    $("#none").css('display', '');
+  }
+  if (!($(this).is(':checked'))) {
+    // the checkbox is now no longer checked
+    $(".checkbox :checkbox[name='" + this.name + "']").prop('checked', false);
+    $(this).parent().parent().remove();
+  }
+});
+
 /*
 //search accordion
 //Darko randic - "ima internet" 10.01.2020

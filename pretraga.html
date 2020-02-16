@@ -16,7 +16,6 @@
     <title>Vodič kroz grad</title>
   </head>
   <body>
-
       <nav class="navbar navbar-expand-md bg-teal-transparent navbar-dark sticky-top">
         <!-- Brand -->
         <a class="navbar-brand" href="#">Vodič kroz grad</a>
@@ -77,15 +76,15 @@
             <div class="z-depth-1-half map-container" id="map">
             </div>
             <div id="infowindow-content">
-		      <img src="" width="16" height="16" id="place-icon">
-		      <span id="place-name"  class="title"></span><br>
-		      <span id="place-address"></span>
-		    </div>
+				      <img src="" width="16" height="16" id="place-icon">
+				      <span id="place-name"  class="title"></span><br>
+				      <span id="place-address"></span>
+				    </div>
         </div>
         
-        <div class="col-sm-3 pt-3 pr-xs-0">
-        	<p class="pl-2" >Parametri pretrage:</p>
-          <div id="accordion">
+        <div class="col-sm-3 pt-3 pr-sm-0">
+	    		<p class="pl-2" >Parametri pretrage:</p>
+					<div id="accordion">
         	<!--
             <div class="row pl-2">
 	              
@@ -257,11 +256,15 @@
               </div>
             </div>
           </div>
-            <div class="col text-center my-3">
-              <button class="btn btn-success" href="#loginToSaveModal" data-toggle="modal" data-target="#loginToSaveModal" style="background-color: #007b5e !important;">
-                Spasi pretragu
-              </button>
-            </div>
+          <p class="pl-2 mt-3">Odabrani parametri:</p>
+          <div class="parameters row pl-3 container" id="parameters">
+          	<p class="pl-2" id="none">Nema</p>
+          </div>
+          <div class="col text-center my-3">
+            <button class="btn btn-success" href="#loginToSaveModal" data-toggle="modal" data-target="#loginToSaveModal" style="background-color: #007b5e !important;">
+              Spasi pretragu
+            </button>
+          </div>
         </div>
       </div>
     </div>
@@ -646,12 +649,13 @@
     <script src="js/form.js"></script>
     <script src="js/pretraga.js"></script>
     <script src="js/validateInput.js"></script>
+    
     <script src="js/mapInit.js"></script>
     <script src="js/mapIcons.js"></script>
     <script src="assets/js/backToTop.js"></script>
     <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCeJLveAW9reXowkdJCjlDoMf4mNpn5pzc&libraries=places&callback=initMap" async defer>
     </script>
-  <!--
+    <!--
 -->
   </body>
 </html>
