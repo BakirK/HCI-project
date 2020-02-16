@@ -462,44 +462,46 @@
                 <span aria-hidden="true">×</span>
               </button>
             </div>
+            <div class="alert alert-success fade show" id="regSuccess">
+              <button type="button" class="close closeAlert">&times;</button>
+              <strong>Uspješna</strong> registracija!
+            </div>
             <!--Body-->
-            <div class="modal-body">
+            <div class="modal-body" id="regFrom">
               <form action="">
                 <div class="form-group">
                   <label for="pwd">Ime i prezime:</label>
-                  <input type="text" class="form-control" id="nameSurnameReg" placeholder="Unesite ime i prezime" name="nameSurnameReg" required>
+                  <input type="text" class="form-control regInput" id="nameSurnameReg" placeholder="Unesite ime i prezime" name="nameSurnameReg" required>
                   <div class="valid-feedback">Ispravno.</div>
                   <div class="invalid-feedback">Molimo popunite ovo polje.</div>
                 </div>
                 <div class="form-group">
                   <label for="pwd">Email:</label>
-                  <input type="email" class="form-control" id="emailReg" placeholder="Unesite email" name="emailReg" required>
+                  <input type="email" class="form-control regInput" id="emailReg" placeholder="Unesite email" name="emailReg" required>
                   <div class="valid-feedback">Ispravno.</div>
                   <div class="invalid-feedback">Email mora biti validan.</div>
                 </div>
                 <div class="form-group">
                   <label for="uname">Korisničko ime:</label>
-                  <input type="text" class="form-control" id="unameReg" placeholder="Unesite username" name="unameReg" required>
+                  <input type="text" class="form-control regInput" id="unameReg" placeholder="Unesite username" name="unameReg" required>
                   <div class="valid-feedback">Ispravno.</div>
                   <div class="invalid-feedback">Molimo popunite ovo polje.</div>
                 </div>
                 <div class="form-group">
                   <label for="pwd">Šifra:</label>
-                  <input type="password" class="form-control" id="pwdReg" placeholder="Unesite šifru" pattern=".{8,64}" name="pswdReg" required>
+                  <input type="password" class="form-control regInput" id="pwdReg" placeholder="Unesite šifru" pattern=".{8,64}" name="pswdReg" required>
                   <div class="valid-feedback">Ispravno.</div>
                   <div class="invalid-feedback">Min 8 karaktera.</div>
                 </div>
                 <div class="form-group form-check">
                   <label class="form-check-label">
-                    <input class="form-check-input" type="checkbox" name="agree" required> Prihvatam uslove korištenja te pravila o korištenju podataka
+                    <input class="form-check-input regInput check-control" type="checkbox" name="agree" required> Prihvatam uslove korištenja te pravila o korištenju podataka
                     <div class="valid-feedback">Ispravno.</div>
                     <div class="invalid-feedback">Molimo popunite ovo polje.</div>
                   </label>
                 </div>
-                <button type="submit" class="btn btn-primary">Registruj se</button>
+                <button type="submit" class="btn btn-primary" id="registerBtn">Registruj se</button>
               </form>
-              
-
             </div>
             <!--Footer-->
             <div class="modal-footer">
