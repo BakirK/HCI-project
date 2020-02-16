@@ -6,11 +6,10 @@ $("#sendMsg").click(function(e){
 		}
 	});
 	if(flag) {
-		$('#msgSent').show();		
+		$('#msgSent').show();
+		$('#formInputs').hide();
+		/*$('.msgInput').val("");
+		$("#contactForm").removeClass("was-validated");
+		$(".msgInput").parent("div").removeClass("was-validated");*/
 	}
 });
-
-$('#contactForm').submit(function (e) {
-	e.preventDefault();
-});
-

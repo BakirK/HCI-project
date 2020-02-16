@@ -579,9 +579,14 @@
             <p>Pretplatite se ukoliko želite da dobivate promocije i novosti</p>
           </div>
           <div class="col-lg-6">
-            <form>
-              <input type="email" name="email" placeholder="E-mail@primjer.com"><input type="button" value="Pretplatite se">
+            <form id="newsForm">
+              <input class="form-control newsInput" type="email" name="email" placeholder="E-mail@primjer.com" required>
+              <input type="submit" value="Pretplatite se" id="sendNewsLetter">
             </form>
+            <div class="alert alert-success fade show" id="newsLetterSent">
+              <button type="button" class="close closeAlert">&times;</button>
+              <strong>Uspješna</strong> pretplata na newsletter!
+            </div>
           </div>
         </div>
       </div>

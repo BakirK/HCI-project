@@ -46,7 +46,7 @@ section .section-title {
   width: calc(100% - 100px);
 }
 
-#footer .footer-newsletter form input[type="button"] {
+#footer .footer-newsletter form input[type="submit"] {
   position: absolute;
   top: 0;
   right: 0;
@@ -62,7 +62,7 @@ section .section-title {
   border-radius: 50px;
 }
 
-#footer .footer-newsletter form input[type="button"]:hover {
+#footer .footer-newsletter form input[type="submit"]:hover {
   background: #468db3;
 }
 
@@ -261,7 +261,7 @@ section .section-title {
     background: #0d2735;
 }
 
-#footer .footer-newsletter form input[type="button"] {
+#footer .footer-newsletter form input[type="submit"] {
     position: absolute;
     top: 0;
     right: 0;
@@ -297,6 +297,12 @@ section .section-title {
   padding: 10px 24px;
   color: #fff;
   transition: 0.4s;
+}
+
+#newsLetterSent {
+  margin-top: 30px;
+  border-radius: 50px;
+  margin-bottom: 0;
 }
 
 @media (max-width:767px){
