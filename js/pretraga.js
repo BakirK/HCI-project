@@ -11,8 +11,10 @@ $(".registerToSaveBtn").click(function(e){
 $(".checkbox :checkbox").change(function (event) {
   if($("#parameters :checkbox").length == 0) {
     $("#none").css('display', 'none');
+    $("#reset").css('display', '');
   } else {
     $("#none").css('display', '');
+    $("#reset").css('display', 'none');
   }
   if (this.checked) {
       // the checkbox is now checked 
@@ -27,14 +29,19 @@ $(".checkbox :checkbox").change(function (event) {
 $("#parameters").on('change', ':checkbox', function (event) {
   if($("#parameters :checkbox").length == 0) {
     $("#none").css('display', 'none');
+    $("#reset").css('display', '');
   } else {
     $("#none").css('display', '');
+    $("#reset").css('display', 'none');
   }
   if (!($(this).is(':checked'))) {
     // the checkbox is now no longer checked
     $(".checkbox :checkbox[name='" + this.name + "']").prop('checked', false);
     $(this).parent().parent().remove();
   }
+});
+$("#reset").click(function(e){
+  $(".addedCheckBox :checkbox").click();
 });
 
 /*
