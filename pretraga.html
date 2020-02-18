@@ -6,6 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="icon" href="img/favicon.png">
     <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i|Roboto:300,300i,400,400i,500,500i,700,700i&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-social/5.1.1/bootstrap-social.min.css" crossorigin="anonymous">
     <link href="assets/vendor/icofont/icofont.min.css" rel="stylesheet">
     <link href="assets/css/backToTop.css" rel="stylesheet">
     <!-- Bootstrap CSS -->
@@ -276,7 +277,7 @@
 
 
 <!-- map info bubble beg-->
-	<div style="display: none">
+	<div style="display: none;">
 	  <div id="info-content">
 	    <table>
 	      <tr id="iw-url-row" class="iw_table_row">
@@ -339,7 +340,20 @@
           <td class="iw_attribute_name"></td>
           <td class="weekday"></td>
         </tr>
+          
+          
 	    </table>
+      <label class="text-center container">Podijeli</label>
+      <div class="mx-auto my-auto hr">
+      </div>
+      <div class="container-fluid">
+        <div class="mx-auto my-auto">
+          <label href="#" class="fa fas fa-copy" style="text-decoration-line: none"></label>
+          <label href="#" class="fa fa-facebook btn-facebook" style="text-decoration-line: none"></label>
+          <label href="#" class="fa fa-twitter btn-twitter" style="text-decoration-line: none"></label>
+          <label href="#" class="fa fa-snapchat-ghost btn-snapchat-ghost" style="text-decoration-line: none"></label>  
+        </div>
+      </div>
 	  </div>
 	</div>
 <!--map info bubble end--> 
@@ -659,12 +673,14 @@
     <script src="js/form.js"></script>
     <script src="js/pretraga.js"></script>
     <script src="js/validateInput.js"></script>
+
     <script src="js/mapInit.js"></script>
     <script src="js/mapIcons.js"></script>
     <script src="assets/js/backToTop.js"></script>
     <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCeJLveAW9reXowkdJCjlDoMf4mNpn5pzc&libraries=places&callback=initMap" async defer>
     </script>
     <!--
+    
 -->
   </body>
 </html>
