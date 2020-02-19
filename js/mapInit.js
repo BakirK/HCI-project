@@ -334,7 +334,7 @@ function buildIWContent(place) {
         divs[i].style.display = '';
         var text = opening_hours.weekday_text[i];
         text = days[i] + text.substr(text.indexOf(":"));
-        text.replace("closed", "zatvoreno");
+        text.replace("Closed", "zatvoreno");
         divs[i].innerHTML = text;
       }
     }
