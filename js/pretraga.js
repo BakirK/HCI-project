@@ -56,6 +56,7 @@ $("#parameters").on('change', ':checkbox', function (event) {
 
 $("#reset").click(function(e){
   $(".checkbox :checked").click();
+  $(".checkbox :checked").change();
 });
 
 /*
