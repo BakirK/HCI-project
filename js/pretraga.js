@@ -8,6 +8,14 @@ $(".registerToSaveBtn").click(function(e){
     $("#registracija").click();
 });
 
+$("#signIn").click(function(event) {
+  if($("#uname").val() == "admin" && $("#pwd").val() == "admin") {
+    window.location.replace("pretragaLogin.html");
+  } else {
+    $("#loginFail").show();
+  }
+});
+
 $(".checkbox :checkbox").change(function (event) {
   if($("#parameters :checkbox").length == 0) {
     $("#none").css('display', 'none');

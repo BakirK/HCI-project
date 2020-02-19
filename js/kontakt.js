@@ -13,3 +13,10 @@ $("#sendMsg").click(function(e){
 		$(".msgInput").parent("div").removeClass("was-validated");*/
 	}
 });
+$("#signIn").click(function(event) {
+  if($("#uname").val() == "admin" && $("#pwd").val() == "admin") {
+    window.location.replace("kontaktLogin.html");
+  } else {
+  	$("#loginFail").show();
+  }
+});

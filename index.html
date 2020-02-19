@@ -371,6 +371,10 @@
             <!--Body-->
 
             <div class="modal-body mb-1">
+              <div class="alert alert-danger fade show" id="loginFail">
+                <button type="button" class="close closeAlert">&times;</button>
+                <strong>Pogrešna</strong> šifra ili korisničko ime!
+              </div>
               <form action="" >
               <div class="form-group">
                 <label for="uname">Korisničko ime:</label>
@@ -389,7 +393,7 @@
                     <input class="form-check-input" type="checkbox" name="remember"> Zapamti šifru?
                   </label>
                 </div>
-              <button type="submit" class="btn btn-primary">Prijavi se</button>
+              <button type="submit" class="btn btn-primary" id="signIn">Prijavi se</button>
             </form>
             </div>
             <!--Footer-->
@@ -624,6 +628,6 @@
     <script src="assets/js/backToTop.js"></script>
     <script src="js/form.js"></script>
     <script src="js/validateInput.js"></script>
-    
+    <script src="js/index.js"></script>
   </body>
 </html>

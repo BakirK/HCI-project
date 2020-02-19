@@ -245,4 +245,18 @@ function validateAll() {
   validateSecond();
   validateThird();
   validateFourth();
+  let flag = true;
+  alert( $(".formContainer").find(":input").length);
+  $(".formContainer").find(":input").each(function(i, v) {
+    if($(this).is(":invalid") && !($(this).is(":valid"))) {
+      flag = false;
+    }
+  });
+  if(!flag) {
+    $('#objectFail').show();
+  } else {
+    $(".formContainer").hide();
+    $('#objectFail').hide();
+    $('#objectSucc').show();
+  }
 }
