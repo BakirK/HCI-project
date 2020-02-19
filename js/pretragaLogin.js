@@ -32,7 +32,7 @@ $("#parameters").on('change', ':checkbox', function (event) {
   let temp = 0;
   if (!($(this).is(':checked'))) {
     // the checkbox is now no longer checked
-    $(".checkbox :checkbox[name='" + this.name + "']").prop('checked', false);
+    $(".checkbox :checkbox[name='" + this.name + "']").click();
     $(".checkbox :checkbox[name='" + this.name + "']").change();
     $(this).parent().parent().remove();
   } else {
