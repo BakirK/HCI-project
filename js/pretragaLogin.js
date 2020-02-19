@@ -1,13 +1,3 @@
-$(".loginToSaveBtn").click(function(e){
-	$('#loginToSaveModal').modal('hide');
-	$("#prijava").click();
-});
-
-$(".registerToSaveBtn").click(function(e){
-	$('#loginToSaveModal').modal('hide');
-    $("#registracija").click();
-});
-
 $("#signIn").click(function(event) {
   if($("#uname").val() == "admin" && $("#pwd").val() == "admin") {
     window.location.replace("pretragaLogin.html");
@@ -29,9 +19,11 @@ $(".checkbox :checkbox").change(function (event) {
   if($(".addedCheckBox").length + temp != 0) {
     $("#none").css('display', 'none');
     $("#reset").css('display', '');
+    $('#saveSearchInitial').removeAttr("disabled");
   } else {
     $("#none").css('display', '');
     $("#reset").css('display', 'none');
+    $('#saveSearchInitial').attr("disabled", "true");
   }
 });
 
@@ -40,9 +32,11 @@ $("#parameters").on('change', ':checkbox', function (event) {
   if($("#parameters :checkbox").length == 0) {
     $("#none").css('display', 'none');
     $("#reset").css('display', '');
+    $('#saveSearchInitial').removeAttr("disabled");
   } else {
     $("#none").css('display', '');
     $("#reset").css('display', 'none');
+    $('#saveSearchInitial').attr("disabled", "true");
   }
   if (!($(this).is(':checked'))) {
     // the checkbox is now no longer checked
@@ -50,9 +44,97 @@ $("#parameters").on('change', ':checkbox', function (event) {
     $(this).parent().parent().remove();
   }
 });
+
 $("#reset").click(function(e){
   $(".addedCheckBox :checkbox").click();
 });
+
+
+
+
+
+var searches = {};
+
+$("#saveSearch").click(function(e) {
+  let flag = true;
+  if($("#searchName").is(":invalid") && !($("#searchName").is(":valid"))) {
+    flag = false;
+  }
+  if(!flag) {
+    $("#searchFail").show();
+  } else {
+    $("#searchFail").hide();
+    $("#saveInput").hide();
+    $("#searchSucc").show();
+    $('#saveSearchInitial').attr("disabled", "true");
+    appendSearch();
+  }
+});
+
+
+function appendSearch() {
+  let name = $("#searchName").val();
+  let item = document.createElement("li");
+  let a = document.createElement("a");
+  let div = document.createElement("div");
+  a.name = name;
+  a.innerHTML = name;
+  a.href = "#";
+  item.appendChild(a);
+  div.style.width = "100%";
+  div.className += ' loadSearch';
+  div.appendChild(item);
+  $("#lista").append(div);
+  $("#deleteAllContainer").show();
+  let names = [];
+  $("#accordion .checkbox :checked").each(function(i, v) {
+    names.push(this.name);
+  });
+  searches[name] = names;
+}
+
+$("#loginToSaveModal").on('hidden.bs.modal', function() {
+  $("#searchName").val("");
+  $("#searchName").attr("class", "form-control");
+  $("#searchFail").hide();
+  $("#saveInput").show();
+  $("#searchSucc").hide();
+});
+
+$(document).on('click','.loadSearch',function(){
+  $(".checkbox :checked").click();
+  let name = this.children[0].children[0].name;
+  $(".checkbox :checkbox").each(function(i, v) {
+    if(searches[name].includes(this.name)) {
+      this.click();
+    }
+  });
+});
+
+$("#deleteAll").click(function() {
+  searches = {};
+  $("#lista").html("");
+  $("#deleteAllContainer").hide();
+});
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 /*
 //search accordion
