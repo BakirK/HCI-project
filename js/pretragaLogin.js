@@ -29,7 +29,15 @@ $(".checkbox :checkbox").change(function (event) {
 
 
 $("#parameters").on('change', ':checkbox', function (event) {
-  if($("#parameters :checkbox").length == 0) {
+  let temp = 0;
+  if (!($(this).is(':checked'))) {
+    // the checkbox is now no longer checked
+    $(".checkbox :checkbox[name='" + this.name + "']").prop('checked', false);
+    $(this).parent().parent().remove();
+  } else {
+    temp = 1;
+  }
+  if($("#parameters :checkbox").length + temp != 0) {
     $("#none").css('display', 'none');
     $("#reset").css('display', '');
     $('#saveSearchInitial').removeAttr("disabled");
@@ -37,11 +45,6 @@ $("#parameters").on('change', ':checkbox', function (event) {
     $("#none").css('display', '');
     $("#reset").css('display', 'none');
     $('#saveSearchInitial').attr("disabled", "true");
-  }
-  if (!($(this).is(':checked'))) {
-    // the checkbox is now no longer checked
-    $(".checkbox :checkbox[name='" + this.name + "']").prop('checked', false);
-    $(this).parent().parent().remove();
   }
 });
 
