@@ -26,12 +26,12 @@ function initMap() {
             featureType: "poi",
             elementType: "labels",
             stylers: [{ visibility: "off" }]
-        },
+        }/*,
         {
           featureType: "transit",
           elementType: "labels",
           stylers: [{ visibility: "off" }]
-        }
+        }*/
     ],
     streetViewControl : false,
     mapTypeControlOptions: {
@@ -46,7 +46,7 @@ function initMap() {
     }
 
   });
-  
+
   const transitLayer = new google.maps.TransitLayer();
 
   transitLayer.setMap(map);
