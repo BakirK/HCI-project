@@ -46,6 +46,10 @@ function initMap() {
     }
 
   });
+  
+  const transitLayer = new google.maps.TransitLayer();
+
+  transitLayer.setMap(map);
 
   service = new google.maps.places.PlacesService(map);
   infoWindow = new google.maps.InfoWindow({
@@ -304,7 +308,7 @@ function buildIWContent(place) {
     if(place.permanently_closed) {
       open = "Zatvoreno do daljnjeg";
     } else
-    if(opening_hours.open_now) {
+    if(opening_hours.isOpen()) {
       open = "Otvoreno";
       if(dan.close) {
         open += ", zatvara se u " + dan.close.time.toString().substr(0,2) + ":" + dan.close.time.toString().substr(2) + "h";

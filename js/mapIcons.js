@@ -37,27 +37,27 @@ var icons = {
     icon: "icons/home_goods_store.png"
   },
   liquor_store : {
-    name: 'Whiskey',
+    name: 'liquor_store',
     icon: "icons/liquor_store.png"
   },
   shopping_mall : {
-    name: 'Mall',
+    name: 'shopping_mall',
     icon: "icons/shopping_mall.png"
   },
   restaurant : {
-    name: 'home_goods_store',
+    name: 'restaurant',
     icon: "icons/restaurant.png"
   },
   bar : {
-    name: 'home_goods_store',
+    name: 'bar',
     icon: "icons/bar.png"
   },
   cafe : {
-    name: 'home_goods_store',
+    name: 'cafe',
     icon: "icons/cafe.png"
   },
   bakery : {
-    name: 'home_goods_store',
+    name: 'bakery',
     icon: "icons/bakery.png"
   },
   night_club : {
@@ -65,51 +65,51 @@ var icons = {
     icon: "icons/night_club.png"
   },
   bank : {
-    name: 'home_goods_store',
+    name: 'bank',
     icon: "icons/bank.png"
   },
   atm : {
-    name: 'home_goods_store',
+    name: 'atm',
     icon: "icons/atm.png"
   },
   embassy : {
-    name: 'home_goods_store',
+    name: 'embassy',
     icon: "icons/embassy.png"
   },
   gym : {
-    name: 'home_goods_store',
+    name: 'gym',
     icon: "icons/gym.png"
   },
   laundry : {
-    name: 'home_goods_store',
+    name: 'laundry',
     icon: "icons/laundry.png"
   },
   zoo : {
-    name: 'home_goods_store',
+    name: 'zoo',
     icon: "icons/zoo.png"
   },
   museum : {
-    name: 'home_goods_store',
+    name: 'museum',
     icon: "icons/museum.png"
   },
   airport : {
-    name: 'home_goods_store',
+    name: 'airport',
     icon: "icons/airport.png"
   },
   taxi_stand : {
-    name: 'home_goods_store',
+    name: 'taxi_stand',
     icon: "icons/taxi_stand.png"
   },
   car_rental : {
-    name: 'home_goods_store',
+    name: 'car_rental',
     icon: "icons/car_rental.png"
   },
   bus_station : {
-    name: 'home_goods_store',
+    name: 'bus_station',
     icon: "icons/bus_station.png"
   },
   light_rail_station : {
-    name: 'home_goods_store',
+    name: 'light_rail_station',
     icon: "icons/light_rail_station.png"
   }
 };
